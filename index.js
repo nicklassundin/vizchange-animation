@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const hbs = require("hbs");
 const express = require('express');
 const app = express();
@@ -6,7 +8,31 @@ const http = require('http');
 
 http.createServer(app).listen(80);
 
-app.get("/",
-	(req, res) => {
-		res.render("browning.hbs",{})
+let browning = require('./res/browning.json')
+app.get("/browning", (req, res) => {
+		res.render("browning.hbs",browning)
 	})
+
+app.use("/css", express.static(`${__dirname}/css`));
+app.use("/src", express.static(`${__dirname}/src`));
+app.use("/client", express.static(`${__dirname}/client`));
+
+
+app.use('/res/:path/:scen/*', function(req,res){
+	let path = `/res/${req.params.path}`
+	let scen = `${req.params.scen}/${req.params['0']}`;
+	let params = `${__dirname}${path}/${scen}`
+	let stats = fs.statSync(params)
+	if(stats.isFile()){
+		fs.readFile(`${params}`, (err, file) => {
+			res.send(file)
+		});
+	}else{
+		fs.readdir(`${params}`, (err, files) => {
+			console.log(files)
+			res.send({files})
+		});
+	}
+})
+
+

@@ -1,0 +1,541 @@
+
+.content {
+	overflow: hidden;
+
+	.sqs-row, .content-wrapper {
+		position: unset;
+
+	}
+	.image-block *, .image-block, .sections * {
+		/*opacity: 0!important;
+
+		 */
+		position: fixed!important;
+		height: 100vh!important;
+		width: auto!important;
+		left: 0!important;
+		top: 0!important;
+		padding: 0!important;
+		margin: 0!important;
+		/*object-position: 0% top!important;
+
+		 */
+		object-fit: cover!important;
+		pointer-events: none;
+
+	}
+	.sqs-button-element--primary {
+		position: absolute;
+		/*transform: translate(0px,-20vw);
+
+		 */
+		z-index : 1;
+		top: 5vw;
+		box-shadow: 2px 2px;
+
+	}
+	.col {
+		top: 5vw;
+		z-index: 1;
+
+	}
+	.sqs-block, .sqs-block * {
+		z-index: 100;
+
+	}
+
+}
+/* Story
+ */
+body:not(.sqs-edit-mode-active)
+section[data-section-id="624c040d6d5d31554588f58b"]{
+	overflow:hidden;
+	.sqs-row, .content-wrapper {
+		position: unset;
+
+	}
+	.image-block *, .image-block, .sections * {
+		position: fixed!important;
+		height: 100vh!important;
+		width: auto!important;
+		left: 0!important;
+		top: 0!important;
+		padding: 0!important;
+		margin: 0!important;
+		object-position: 0% top!important;
+		/*object-fit: cover!important;
+
+		 */
+		pointer-events: none;
+
+	}
+	.sqs-button-element--primary {
+		position: absolute;
+		/*transform: translate(0px,-20vw);
+
+		 */
+		top: 5vw;
+		z-index : 1;
+		box-shadow: 2px 2px;
+
+	}
+	.col {
+		top: 5vw;
+		z-index: 1;
+
+	}
+	.sqs-block, .sqs-block * {
+		z-index: 100;
+
+	}
+
+}
+body:not(.sqs-edit-mode-active){
+	/* 1b-cloud
+
+	 */
+	#block-yui_3_17_2_1_1649668149073_9495 {
+		z-index: 1;
+		/*transform: translate(0px,100%);
+		 */
+
+	}
+	/* 1c-cloud
+	
+	 */
+	#block-yui_3_17_2_1_1649758477534_9277 {
+		z-index: 102;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	#block-yui_3_17_2_1_1652343551372_44060, #block-yui_3_17_2_1_1652343551372_39714, #block-yui_3_17_2_1_1649758477534_9277, #block-yui_3_17_2_1_1649668149073_9495 {
+		opacity: 0;
+
+	}
+	/* 1d
+	
+	 */
+	#block-yui_3_17_2_1_1651049598100_17242 {
+		z-index: 24;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	/* 2a-background
+	
+	 */
+	#block-yui_3_17_2_1_1649323123247_16515 {
+		z-index: 21;
+		/*transform: translate(0px,100%);
+
+		 */
+
+	}
+	/* 2b-background
+	
+	 */
+	#block-yui_3_17_2_1_1649668149073_10547 {
+		z-index: 23;
+		/*  transform: translate(0px,100%);
+
+		 */
+
+	}
+
+	/* 2c-background
+	
+	 */
+	#block-yui_3_17_2_1_1649837773162_9875 {
+		z-index: 25;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	/* 2d
+	/* rain
+	
+	 */
+	#block-yui_3_17_2_1_1649758477534_9277 {
+
+
+	}
+	#block-yui_3_17_2_1_1651049598100_21026 {
+		z-index: 26;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	/* 3a-detail
+
+	 */
+	#block-yui_3_17_2_1_1649667699761_18917{
+		z-index: 31;
+		/*transform: translate(0px,100%);
+
+		 */
+
+	}
+	/* 3b-detail
+
+	 */
+	#block-yui_3_17_2_1_1649668149073_11596 {
+		z-index: 32;
+		/*transform: translate(0px,100%);
+
+		 */
+
+	}
+
+	/* 3c-detail
+
+	 */
+	#block-yui_3_17_2_1_1649837773162_11847 {
+		z-index: 34;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	#block-yui_3_17_2_1_1649837773162_13849 {
+		z-index: 35;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+
+
+	/* 4a-ground
+
+	 */
+	#block-yui_3_17_2_1_1649752046807_9796 {
+		z-index: 41;
+		/*transform: translate(0px,100%);
+
+		 */
+
+	}
+	#block-yui_3_17_2_1_1652343551372_28989 {
+		z-index: 42;
+
+	}
+	/* animation apng a
+
+	 */
+	#block-yui_3_17_2_1_1652343551372_28989{
+		-webkit-animation:mymove 1s 3;
+		animation:mymove 1s 3;
+
+	}
+	@keyframes mymove
+	{
+		0% {
+			top:0px;
+
+		}
+
+		25% {
+			top:200px;
+
+		}
+
+		75% {
+			top:50px;
+
+		}
+
+		100% {
+			top:100px;
+
+		}
+
+
+	}
+
+	@-webkit-keyframes mymove 
+	{
+		0% {
+			top:0px;
+
+		}
+
+		25% {
+			top:200px;
+
+		}
+
+		75% {
+			top:50px;
+
+		}
+
+		100% {
+			top:100px;
+
+		}
+
+
+	}
+	/* 4b-ground
+
+	 */
+	#block-yui_3_17_2_1_1649752046807_11326 {
+		z-index: 42;
+		/*transform: translate(0px,40%);
+
+		 */
+
+	}
+	/* 4c-ground
+
+	 */
+	#block-yui_3_17_2_1_1649837773162_15910 {
+		z-index: 43;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+	/* 3d-detail
+
+	 */
+	#block-yui_3_17_2_1_1651049598100_25001 {
+		z-index: 45;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}  
+	#block-yui_3_17_2_1_1651049598100_28195 {
+		z-index: 46;
+		/*transform: translate(0px,200%);
+
+		 */
+
+	}
+
+}
+/* discovery Dive
+/* Header
+
+ */
+
+#block-yui_3_17_2_1_1652345046515_30615{
+	z-index: 25;
+
+}
+#block-yui_3_17_2_1_1652345046515_29670 {
+	z-index: 51;
+
+}
+#block-yui_3_17_2_1_1652345046515_32389{
+	z-index: 51;
+
+}
+/*ground 1
+
+ */
+#block-yui_3_17_2_1_1652345046515_33277{
+	z-index: 52;
+
+}
+
+/*circle
+
+ */
+#block-yui_3_17_2_1_1652346524875_49576{
+	z-index: 53;
+
+}
+/* people 1
+
+ */
+#block-yui_3_17_2_1_1652346524875_58512 {
+	z-index: 54;
+
+}
+/*people-circles
+
+ */
+#block-yui_3_17_2_1_1652346524875_62860{
+	z-index: 55;
+
+}
+/* lake fishes
+
+ */
+#block-yui_3_17_2_1_1652346524875_53987 {
+	z-index: 56;
+
+}
+/* lake cediment
+
+ */
+#block-yui_3_17_2_1_1652345046515_34165{
+	z-index: 57;
+
+}
+/* co2 info-graph
+
+ */
+#block-yui_3_17_2_1_1652346524875_73750{
+	z-index: 61;
+
+}
+/* smal circle
+
+ */
+#block-yui_3_17_2_1_1652346524875_78112{
+	z-index: 60;
+
+}
+/* lake fish 2
+
+ */
+#block-yui_3_17_2_1_1652346524875_82470 {
+	z-index: 59;
+
+}
+/* lake cediment brown
+
+ */
+#block-yui_3_17_2_1_1652345046515_35068 {
+	z-index: 58;
+
+}
+/* people 3
+
+ */
+#block-yui_3_17_2_1_1652346524875_104368{
+	z-index: 62;
+
+}
+/* fishes 3
+
+ */
+#block-yui_3_17_2_1_1652346524875_86801 {
+	z-index: 63;
+
+}
+/* chatt bubbles
+
+ */
+#block-yui_3_17_2_1_1652346524875_95680 {
+	z-index: 64;
+
+}
+/* lake brown dots
+
+ */
+#block-yui_3_17_2_1_1652346524875_91317 {
+	z-index: 65;
+
+}
+/* lake waves
+
+ */
+#block-yui_3_17_2_1_1652346524875_100024 {
+	z-index: 66;
+
+}
+/* big lake fishes
+
+ */
+#block-yui_3_17_2_1_1652345046515_35962 {
+	z-index: 67;
+
+}
+#block-yui_3_17_2_1_1652345046515_37373 {
+	z-index: 68;
+
+}
+#block-yui_3_17_2_1_1652345046515_38276 {
+	z-index: 69;
+
+}
+#block-yui_3_17_2_1_1652345046515_39163 {
+	z-index: 71;
+
+}
+#block-yui_3_17_2_1_1652345046515_40070 {
+	z-index: 72;
+
+}
+#block-yui_3_17_2_1_1652345046515_40977 {
+	z-index: 73;
+
+}
+#block-yui_3_17_2_1_1652345046515_41881 {
+	z-index: 74;
+
+}
+#block-yui_3_17_2_1_1652345046515_42938 {
+	z-index: 75;
+
+}
+/* sweden map
+
+ */
+#block-yui_3_17_2_1_1652343551372_85515 {
+	z-index: 76;
+
+}
+/* big top circle
+
+ */
+#block-yui_3_17_2_1_1652343551372_96363 {
+	z-index: 77;
+
+}
+#block-yui_3_17_2_1_1652343551372_91847{
+	z-index: 78;
+
+}
+/* Local Evidence
+/* chart
+
+ */
+#block-yui_3_17_2_1_1651737837356_22034{
+	z-index: 500;
+
+}
+#block-yui_3_17_2_1_1652343551372_64049 {
+	z-index: 502;
+
+}
+#block-yui_3_17_2_1_1651737992666_17273{
+	z-index: 501;
+
+}
+#block-yui_3_17_2_1_1651737992666_15424{
+	z-index: 503;
+
+}
+#block-yui_3_17_2_1_1651737992666_16345{
+	z-index: 504;
+
+}
+#block-yui_3_17_2_1_1652183716602_27299 {
+	z-index: 601
+
+}
+#block-yui_3_17_2_1_1652183716602_24112 {
+	z-index: 602
+
+}
+#block-yui_3_17_2_1_1652183716602_25206 {
+	z-index: 603
+
+}
+#block-yui_3_17_2_1_1652183716602_26257 {
+	z-index: 604
+}
+
+#block-yui_3_17_2_1_1652183716602_28351 {
+	z-index: 605
+}

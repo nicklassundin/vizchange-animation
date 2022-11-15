@@ -1,0 +1,148 @@
+{
+    "segments": [{
+        "id": "header",
+        "title": "Browning",
+        "menu": [{
+            "text": "Immersion",
+            "href": "#high"
+        },{
+            "text": "Discovery Dive",
+            "href": "#NONE"
+        },{
+            "text": "Fish Stories",
+            "href": "#NONE"
+        },{
+            "text": "Local Evidencia",
+            "href": "#NONE"
+        }],
+        "text": []
+    },{
+        "id": "high",
+        "menu": [],
+        "text": [{
+            "header": "What is this high place ?",
+            "text": "Mountains are surrounding you, you can feel the wind from the lack of trees. It looks like the arctic. Let’s wonder a bit further."
+        }]
+    },{
+        "id": "rain",
+        "menu": [],
+        "text": [{"text": "Coming down was a good idea. You can now see clearer, is that a lake that you spot from afar ? Let’s hurry, it’s starting to rain heavily. It is warmer than what you expected here. +1°c = +7% more moisture in the atmosphere"}]
+    },{
+        "id": "mud",
+        "menu": [],
+        "text": [{"text": " The ground doesn’t seem very stable here but it looks quite rich. Browning and greening are happening at the same time."}]
+    },{
+        "id": "lake",
+        "menu": [],
+        "text": [{"text": "Looks like you made it to the lake ! Let’s swim ! But the water is so brown… It looks dark, you can’t see what’s underneath, are you sure you want to venture in it ?"}]
+    },{
+        "id": "dive-yesterday",
+        "menu": [],
+        "text": [{"text":  ""}]
+    },{
+        "id": "dive-today",
+        "menu": [],
+        "text": [{"text":  ""}]
+    },{
+        "id": "dive-tomorrow",
+        "menu": [],
+        "text": [{"text":  ""}]
+    }],
+    "resources" : [{
+        "path": "/res/browning",
+        "files": [{
+            "id": "a1",
+            "level": "background",
+            "file": "/res/browning/imersion/a/1a.png"
+        },{
+            "id": "a2",
+            "level": "detail",
+            "file": "/res/browning/imersion/a/2a.png"
+        },{
+            "id": "a3",
+            "level": "ground",
+            "file": "/res/browning/imersion/a/3a.png"
+        },{
+            "id": "a4",
+            "level": "clouds",
+            "file": "/res/browning/imersion/a/4a.png"
+        }]
+    },{
+        "path": "/res/browning",
+        "files": [{
+            "id": "b1",
+            "level": "background",
+            "file": "/res/browning/imersion/b/1b-background.png"
+        },{
+            "id": "b2",
+            "level": "detail",
+            "file": "/res/browning/imersion/b/2b-detail.png"
+        },{
+            "id": "b3",
+            "level": "clouds",
+            "file": "/res/browning/imersion/b/3b-clouds.png"
+        },{
+            "id": "b4",
+            "level": "ground",
+            "file": "/res/browning/imersion/b/4b-ground.png"
+        }]
+    },{
+        "path": "/res/browning",
+        "files": [{
+            "id": "c1",
+            "level": "background",
+            "file": "/res/browning/imersion/c/1c-background.png"
+        },{
+            "id": "c2",
+            "level": "detail",
+            "file": "/res/browning/imersion/c/2c-detail.png"
+        },{
+            "id": "c3",
+            "level": "clouds",
+            "file": "/res/browning/imersion/c/3c-clouds.png"
+        },{
+            "id": "c4",
+            "level": "ground",
+            "file": "/res/browning/imersion/c/4c-ground.png"
+        }]
+    },{
+        "path": "/res/browning",
+        "files": [{
+            "id": "d1",
+            "level": "background-back",
+            "file": "/res/browning/discovery/background_far.png"
+        },{
+            "id": "d2",
+            "level": "background",
+            "file": "/res/browning/imersion/d/2d-background.png"
+        },{
+            "id": "d3",
+            "level": "ground",
+            "file": "/res/browning/imersion/d/3d-water.png"
+        }]
+    },{
+        "path": "/res/browning",
+        "files": [
+        {
+            "id": "bg2",
+            "level": "background-front",
+            "file": "/res/browning/discovery/background_close.png"
+        },{
+            "id": "fg1",
+            "level": "ground",
+            "file": "/res/browning/discovery/foreground_1.png"
+        },{
+            "id": "fg2",
+            "level": "ground",
+            "file": "/res/browning/discovery/foreground_2.png"
+        },{
+            "id": "fg3",
+            "level": "ground",
+            "file": "/res/browning/discovery/foreground_3.png"
+        },{
+            "id": "title",
+            "level": "ground",
+            "file": "/res/browning/discovery/time.png"
+        }]
+    }]
+}
