@@ -1,0 +1,22 @@
+<!-- extends default--><!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="css/browning.css">
+        <link rel="stylesheet" type="text/css" href="css/z-axis.css">
+        <script src="client/bundle.js"></script>
+	</head>
+	<body>
+    <div class="content" id="story">
+        {{#each segments}}
+            <div id={{this.id}} class="segment">
+                {{> segment parameters=this}}
+            </div>
+        {{/each}}
+        {{#each resources}}
+            <div>
+                {{> resources parameters=this }}
+            </div>
+        {{/each}}
+    </div>
+	</body>
+</html>

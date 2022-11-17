@@ -1,6 +1,7 @@
 const fs = require('fs')
 
 const hbs = require("hbs");
+hbs.registerPartials(`${__dirname}/views/partials`);
 const express = require('express');
 const app = express();
 
@@ -10,7 +11,7 @@ http.createServer(app).listen(80);
 
 let browning = require('./res/browning.json')
 app.get("/browning", (req, res) => {
-		res.render("browning.hbs",browning)
+		res.render("browning.hbs", browning)
 	})
 
 app.use("/css", express.static(`${__dirname}/css`));

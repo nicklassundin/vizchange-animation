@@ -1,0 +1,42 @@
+{
+  "name": "story-beta",
+  "version": "0.0.1",
+  "description": "beta testing story tool for vizchange.net",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "node index.js",
+    "start-dev": "npx nodemon \\\"node index.js d\\\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "change",
+    "ecology",
+    "story",
+    "learning",
+    "education"
+  ],
+  "author": "Nicklas Sundin Johansson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "gsap": "^3.11.3",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.16",
+    "scrolltrigger": "^1.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*.js",
+      "docs/*",
+      "node_modules/*"
+    ],
+    "events": {
+      "start": "webpack --mode=development"
+    }
+  }
+}
