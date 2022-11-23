@@ -1,9 +1,20 @@
-
+.ground-back {
+    z-index: 2999;
+}
 .ground {
     z-index: 3000;
 }
+.ground-front {
+     z-index: 3001;
+ }
+.detail-back {
+    z-index: 1999;
+}
 .detail {
     z-index: 2000;
+}
+.detail-front {
+    z-index: 2001;
 }
 .background-back{
     z-index: 999;

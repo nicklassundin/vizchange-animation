@@ -13,6 +13,23 @@ let browning = require('./res/browning.json')
 app.get("/browning", (req, res) => {
 		res.render("browning.hbs", browning)
 	})
+app.render(
+	"browning.hbs",
+	browning,
+	(err, str) => {
+		if (err) {
+			throw err;
+		}
+		fs.writeFile("index.html", str, (err) => {
+				if (err) {
+					console.error(err);
+				}
+			}
+		);
+	}
+);
+
+
 
 app.use("/css", express.static(`${__dirname}/css`));
 app.use("/src", express.static(`${__dirname}/src`));

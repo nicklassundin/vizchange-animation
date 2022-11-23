@@ -83,8 +83,9 @@ export class Phrase {
     }
     addHorizontalOut () {
         this.timeline.to(this.ids.background, { y: '50%', duration: 1  },'>')
-        this.timeline.to(this.ids.foreground, { y: '40%', duration: 1  },'<')
-        this.timeline.to(this.ids.detail, { y: '12%', duration: 1  },'<')
+        this.timeline.to(this.ids.foreground, { y: '30%', x: '-3%', duration: 1  },'<')
+        this.timeline.to(this.ids.detail, { y: '12%', x: '-5%', duration: 1  },'<')
+
         this.ids.more.forEach((each) => {
             this.timeline.to(each, { y: '50%', duration: 1  },'<')
         })

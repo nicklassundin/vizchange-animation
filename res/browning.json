@@ -75,7 +75,7 @@
             "file": "/res/browning/imersion/b/1b-background.png"
         },{
             "id": "b2",
-            "level": "detail",
+            "level": "detail-back",
             "file": "/res/browning/imersion/b/2b-detail.png"
         },{
             "id": "b3",
@@ -83,7 +83,7 @@
             "file": "/res/browning/imersion/b/3b-clouds.png"
         },{
             "id": "b4",
-            "level": "ground",
+            "level": "ground-back",
             "file": "/res/browning/imersion/b/4b-ground.png"
         }]
     },{
