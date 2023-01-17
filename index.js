@@ -14,7 +14,7 @@ app.get("/browning", (req, res) => {
 		res.render("browning.hbs", browning)
 	})
 app.render(
-	"browning.hbs",
+	"github-browning.hbs",
 	browning,
 	(err, str) => {
 		if (err) {
