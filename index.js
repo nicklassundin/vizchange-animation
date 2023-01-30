@@ -26,7 +26,7 @@ app.get("/browning-discovery", (req, res) => {
 	})
 })
 app.render(
-	"browning.hbs",
+	"browning-github.hbs",
 	browning,
 	(err, str) => {
 		if (err) {
