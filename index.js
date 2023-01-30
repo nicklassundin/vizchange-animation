@@ -9,12 +9,24 @@ const http = require('http');
 
 http.createServer(app).listen(80);
 
-let browning = require('./res/browning.json')
+let browning = require('./res/browning.js')
 app.get("/browning", (req, res) => {
 		res.render("browning.hbs", browning)
 	})
+app.get("/browning-imersive", (req, res) => {
+	res.render("browning.hbs", {
+		acts: [browning.acts.imersion],
+		actsID: ['imersion']
+	})
+})
+app.get("/browning-discovery", (req, res) => {
+	res.render("browning.hbs", {
+		acts: [browning.acts.discovery],
+		actsID: ['discovery'],
+	})
+})
 app.render(
-	"github-browning.hbs",
+	"browning.hbs",
 	browning,
 	(err, str) => {
 		if (err) {

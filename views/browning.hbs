@@ -2,18 +2,41 @@
 <html>
     {{> head}}
 	<body>
-    <div class="content" id="story">
-        {{#each segments}}
-            <div id={{this.id}} class="segment">
-                {{> segment parameters=this}}
+    {{> script this}}
+    {{#each acts}}
+        <div class="content" id={{this.id}}>
+            {{#each this.scens}}
+                <div id={{this.id}} class="segment">
+                    {{> segment parameters=this}}
+                </div>
+            {{/each}}
+            {{#each this.resources}}
+                <div>
+                    {{> resources parameters=this }}
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+    <div class="content" id="credit">
+        <div class="segment">
+            <div class="captions">
+                <div class="caption">
+                    <p>TODO Credit</p>
+                </div>
             </div>
-        {{/each}}
-        {{#each resources}}
-            <div>
-                {{> resources parameters=this }}
-            </div>
-        {{/each}}
+        </div>
     </div>
+    <!--
+    <div class="content" id="end-div">
+        <div id="end-segment" class="segment">
+            <div class="captions">
+                <div class="caption">
+                    END
+                </div>
+            </div>
+        </div>
+   </div>
+   -->
     {{> margin}}
 	</body>
 </html>

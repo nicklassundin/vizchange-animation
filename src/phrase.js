@@ -23,9 +23,9 @@ const options = {
     },
     'landscape': {
         scrollTrigger:{
-            start: "top center",
-            end: "bottom center",
-            //markers: true,
+            start: "top bottom",
+            end: "bottom top",
+            markers: true,
             //pin: true,
             //pinnedContainer: true,
             scrub: 0.5,
@@ -46,9 +46,6 @@ const options = {
     },
 }
 
-
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 export class Phrase {
     constructor(id, type, detail, foreground, background) {
         this.config = options[type]
@@ -64,61 +61,108 @@ export class Phrase {
         this.timeline.from(this.ids.background, { y: '25%', duration: 1  },0)
         this.timeline.from(this.ids.foreground, { y: '15%', duration: 1  },'<')
         this.timeline.from(this.ids.detail, { y: '10%', duration: 1  },'<')
-        this.ids.more.forEach((each) => {
-            this.timeline.from(each, { y: '10%', duration: 1  },'<')
-        })
+        this.timeline.from(this.ids.more, { y: '10%', duration: 1  },'<')
         return this
     }
-    addHorizontalIn () {
-        this.timeline.from(this.ids.background, { y: '75%', duration: 1  },0)
-        this.timeline.from(this.ids.foreground, { y: '85%', duration: 1  },'<')
-        this.timeline.from(this.ids.detail, { y: '90%', duration: 1  },'<')
-        this.ids.more.forEach((each) => {
-            this.timeline.from(each, { y: '90%', duration: 1  },'<')
+    addHorizontalIn (factor = 1 ) {
+        this.timeline.from(this.ids.background, { y: `${factor*75}%`, duration: 1  },0)
+        this.timeline.from(this.ids.foreground, { y: `${factor*85}%`, duration: 1  },'<')
+        this.timeline.from(this.ids.detail, { y: `${factor*90}%`, duration: 1  },'<')
+        this.timeline.from(this.ids.more, { y: `${factor*90}%`, duration: 1  },'<')
+    }
+    addHorizontal (infactor, outfactor) {
+        this.addHorizontalIn(infactor)
+        this.addHorizontalOut(outfactor)
+    }
+    addHorizontalOut (factor = 1) {
+        this.timeline.to(this.ids.background, { y: `${factor*75}%`, duration: 1  },'>')
+        this.timeline.to(this.ids.foreground, { y: `${factor*60}%`, x: '-3%', duration: 1  },'<')
+        this.timeline.to(this.ids.detail, { y: `${factor*50}%`, x: '-5%', duration: 1  },'<')
+        this.timeline.to(this.ids.more, { y: `${factor*50}%`, duration: 1  },'<')
+    }
+}
+
+export class verticalAnimation {
+    //constructor(id, type, detail, foreground, background) {
+    constructor(id, type, detail = [], background, foreground, alignBackground, endId = id) {
+        this.config = options[type]
+        this.config.scrollTrigger.trigger = id
+        this.config.scrollTrigger.endTrigger = endId
+        this.timeline = gsap.timeline(this.config)
+        this.timeline.addLabel('intro', 0)
+        this.timeline.addLabel('yesterday', 6)
+        this.timeline.addLabel('today', 10)
+        this.timeline.addLabel('tomorrow', 14);
+        this.ids = {};
+        this.ids.detail = detail
+        this.ids.foreground = foreground
+        this.ids.background = background
+        this.ids.alignBackground = alignBackground;
+        this.ids.popup = Object.values(arguments).slice(7);
+        //this.ids.more = Object.values(arguments).slice(5);
+        this.times = 0;
+    }
+    fromRaise(object, config, position) {
+        object.forEach((each, index) => {
+            let conf = JSON.parse(JSON.stringify(config))
+            config.y = `${conf.y*(10-index)/10}%`
+            this.timeline.to(each, conf, position)
+            console.log(each, conf, position)
+            position = '<';
         })
     }
-    addHorizontal () {
-        this.addHorizontalIn()
-        this.addHorizontalOut()
+    addLakeAlign (start = 0) {
+        this.timeline.from(this.ids.alignBackground, {opacity: 0, duration: 1}, start)
+
+        this.timeline.to(this.ids.alignBackground, { x: '-15.6%', duration: 1}, '>')
+
+        this.timeline.from(this.ids.background, { x: '15.6%', duration: 1}, '>')
+        this.timeline.from(this.ids.foreground, { x: '15.6%', duration: 1}, '<')
+
+        this.timeline.from(this.ids.foreground, {opacity: 0, duration: 1}, '>')
+
+
+        //this.timeline.to(this.ids.alignBackground, {y: '-19.7%',  duration: 1}, '>')
+        this.fromRaise(this.ids.alignBackground, {y: -19.7, duration: 1}, '>')
+
+        this.timeline.from(this.ids.background, {y: '19.7%', duration: 1}, '<')
+        this.timeline.from(this.ids.foreground, {y: '19.7%', duration: 1}, '<')
+
+        this.timeline.from(this.ids.background, {opacity: 0, duration: 1}, '>')
+        this.timeline.from(this.ids.detail, {opacity: 0, duration: 1}, '<')
+
+        let keeper = this.ids.alignBackground.shift()
+        this.timeline.to(this.ids.alignBackground, {opacity: 0, duration: 0}, '>')
+        this.ids.alignBackground = keeper;
+
+        // after
+
     }
-    addHorizontalOut () {
-        this.timeline.to(this.ids.background, { y: '50%', duration: 1  },'>')
-        this.timeline.to(this.ids.foreground, { y: '30%', x: '-3%', duration: 1  },'<')
-        this.timeline.to(this.ids.detail, { y: '12%', x: '-5%', duration: 1  },'<')
+    addVertical (start = '>') {
+        let value = 60
+        this.timeline.to(this.ids.background, {x: `-${value/2*this.times}%`, duration: 2}, start)
+        this.timeline.from(this.ids.popup[this.times], {opacity: 0, duration: 2}, '<')
 
-        this.ids.more.forEach((each) => {
-            this.timeline.to(each, { y: '50%', duration: 1  },'<')
-        })
-    }
-    addLakeAlign () {
-        this.timeline.from(this.ids.detail, { y: '75%', duration: 1  },0)
-        this.timeline.from(this.ids.foreground, { y: '85%', duration: 1  },'<')
-        this.timeline.from(this.ids.background, { y: '90%', duration: 1  },'<')
+        this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.foreground, {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.detail, {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[0], {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 2}, '<')
 
+        this.timeline.delay(1)
+        this.timeline.to(this.ids.background, {x: `-${value/2*this.times}%`, duration: 2}, '>')
+        this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
+        this.timeline.to(this.ids.foreground, {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.detail, {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[0], {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 2}, '<')
+        //this.timeline.to(this.ids.popup[this.times], {opacity: 0, duration: 1}, '<')
 
-        this.timeline.to(this.ids.detail, { y: '-10%', duration: 1  },'>')
-        this.timeline.to(this.ids.foreground, { y: '-20%', duration: 1  },'<')
-        this.timeline.to(this.ids.background, { y: '-20%', x: '-15%', duration: 2 },'<')
-        console.log(this.ids)
-        if(typeof this.ids.more === 'string'){
-            this.timeline.from(this.ids.more, { opacity: 0, duration: 1}, '>')
-        }else{
-            this.ids.more.forEach(each => {
-                this.timeline.from(each, { opacity: 0, duration: 1}, '>')
-            })
-        }
-        this.timeline.to(this.ids.background, { opacity: 0, duration: 1}, '>')
-    }
-    addVertical () {
-        //this.timeline.from(this.ids.detail, {opacity: 0, duration: 1}, 0)
-        this.timeline.from(this.ids.more[2], {opacity: 0, duration: 1}, 0)
+        //this.timeline.to(this.ids.popup[this.times-1], {opacity: 0, duration: 1}, '<')
 
 
-        let diveObjects = [this.ids.detail, this.ids.background, this.ids.foreground].concat(this.ids.more)
-        this.timeline.to(diveObjects, { x: '-50vh'}, '>')
-
-        this.timeline.from(this.ids.background, {opacity: 0, duration: 1}, '<')
-
-        this.timeline.to(diveObjects, { x: '-100vh'}, '>')
+        this.times += 1;
     }
 }

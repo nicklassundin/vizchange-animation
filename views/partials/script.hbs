@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    ((acts) => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        acts = acts.split(",");
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+        window.addEventListener('load', function () {
+            const headings = gsap.utils.toArray(".caption");
+            const sections = gsap.utils.toArray(".segment")
+            headings.forEach((title, i) => {
+                gsap.to(title,
+                        {
+                            ease: 'power1.inOut',
+                            scrollTrigger: {
+                                trigger: sections[i],
+                                start: 'top top',
+                                end: 'bottom top',
+                                scrub: true,
+                                pin: true
+                            },
+                        })
+            });
+            acts.forEach(each => {
+                switch (each) {
+                    case 'imersion':
+                        new Imersive();
+                        break;
+                    case 'discovery':
+                        new Discovery();
+                        break;
+                    default:
+                }
+            })
+            ScrollTrigger.refresh()
+        })
+    })("{{actsID}}")
+</script>
