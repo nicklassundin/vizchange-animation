@@ -7,6 +7,7 @@
             window.scrollTo(0, 0);
         }
         window.addEventListener('load', function () {
+            /*
             const headings = gsap.utils.toArray(".caption");
             const sections = gsap.utils.toArray(".segment")
             headings.forEach((title, i) => {
@@ -22,6 +23,8 @@
                             },
                         })
             });
+
+             */
             acts.forEach(each => {
                 switch (each) {
                     case 'imersion':
@@ -30,9 +33,13 @@
                     case 'discovery':
                         new Discovery();
                         break;
+                    case 'fishes':
+                        new Fishes();
+                        break;
                     default:
                 }
             })
+
             ScrollTrigger.refresh()
         })
     })("{{actsID}}")

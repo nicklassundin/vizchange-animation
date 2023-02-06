@@ -1,0 +1,68 @@
+{
+  "id": "fishes",
+  "scens": [
+    {
+      "id": "dive-intro"
+    },{
+    "id": "dive-yesterday",
+    "menu": [],
+    "text": [{
+      "id": "dive-yesterday-text 1",
+      "header": "",
+      "text": ""
+    }]
+  }],
+
+  "next": {
+    "id": "next",
+    "redirect": [{
+      "text": "Immersion",
+      "href": "/browning-imersive"
+    },{
+      "text": "Discovery Dive",
+      "href": "/browning-discovery"
+    },{
+      "text": "Fish Stories",
+      "href": "#fishes"
+    },{
+      "text": "Local Evidencia",
+      "href": "/browning-evidencia"
+    }]
+  },
+  "resources": [{
+    "path": "/res/browning",
+    "files": [{
+      "id": "char",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/arctic_char.png"
+    },{
+      "id": "barbel",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/barbel.png"
+    },{
+      "id": "trout",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/brown_trout.png"
+    },{
+      "id": "grayling",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/grayling.png"
+    },{
+      "id": "minnow",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/minnow.png"
+    },{
+      "id": "perch",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/perch.png"
+    },{
+      "id": "pike",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/pike.png"
+    },{
+      "id": "salmon",
+      "level": "ground-front",
+      "file": "/res/browning/fishes/salmon.png"
+    }]
+  }]
+}

@@ -2,8 +2,10 @@
 const {Phrase} = require("../phrase");
 export class Imersive {
     constructor () {
+
         let highPhrase = new Phrase('#high', 'title_horizontal','#a3', '#a2', '#a1')
         highPhrase.addTitle()
+        highPhrase.fadeText()
         highPhrase.addHorizontalOut(0.5)
         let timeline = highPhrase.timeline
 
@@ -17,10 +19,10 @@ export class Imersive {
 
 
         let lakePhrase = new Phrase( '#lake', 'landscape', '#d1', '#d3', '#d2', '#bg2')
-        lakePhrase.addHorizontalIn();
-        lakePhrase.addHorizontalOut(0)
+        lakePhrase.addHorizontal(1, 0);
 
         let lake = lakePhrase.timeline
+
     }
 }
 

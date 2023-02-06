@@ -8,7 +8,9 @@ import Draggable from "gsap/Draggable";
 export const {Phrase} = require('../phrase.js')
 export const {Imersive} = require('./imersive');
 export const {Discovery} = require('./discovery');
+export const {Fishes} = require('./fishes');
 
 window.Imersive = Imersive;
 window.Discovery = Discovery;
+window.Fishes = Fishes;
 

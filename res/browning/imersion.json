@@ -8,35 +8,58 @@
       "href": "#high"
     },{
       "text": "Discovery Dive",
-      "href": "#NONE"
+      "href": "/browning-discovery"
     },{
       "text": "Fish Stories",
-      "href": "#NONE"
+      "href": "/browning-fishes"
     },{
       "text": "Local Evidencia",
-      "href": "#NONE"
+      "href": "/browning-evidencia"
     }],
     "text": []
   },{
     "id": "high",
     "menu": [],
     "text": [{
+      "id": "high-text 1",
       "header": "What is this high place?",
       "text": "Mountains are surrounding you, you can feel the wind from the lack of trees. It looks like the arctic. Let’s wonder a bit further."
     }]
   },{
     "id": "rain",
     "menu": [],
-    "text": [{"text": "Coming down was a good idea. You can now see clearer, is that a lake that you spot from afar ? Let’s hurry, it’s starting to rain heavily. It is warmer than what you expected here. +1°c = +7% more moisture in the atmosphere"}]
+    "text": [{
+      "id": "rain-text 1",
+      "text": "Coming down was a good idea. You can now see clearer, is that a lake that you spot from afar ? Let’s hurry, it’s starting to rain heavily. It is warmer than what you expected here. +1°c = +7% more moisture in the atmosphere"}]
   },{
     "id": "mud",
     "menu": [],
-    "text": [{"text": " The ground doesn’t seem very stable here but it looks quite rich. Browning and greening are happening at the same time."}]
+    "text": [{
+      "id": "mud-text 1",
+      "text": " The ground doesn’t seem very stable here but it looks quite rich. Browning and greening are happening at the same time."}]
   },{
     "id": "lake",
     "menu": [],
-    "text": [{"text": "Looks like you made it to the lake ! Let’s swim ! But the water is so brown… It looks dark, you can’t see what’s underneath, are you sure you want to venture in it ?"}]
+    "text": [{
+      "id": "lake-text 1",
+      "text": "Looks like you made it to the lake ! Let’s swim ! But the water is so brown… It looks dark, you can’t see what’s underneath, are you sure you want to venture in it ?"}]
   }],
+  "next": {
+    "id": "next",
+    "redirect": [{
+      "text": "Immersion",
+      "href": "#high"
+    },{
+      "text": "Discovery Dive",
+      "href": "/browning-discovery"
+    },{
+      "text": "Fish Stories",
+      "href": "/browning-fishes"
+    },{
+      "text": "Local Evidencia",
+      "href": "/browning-evidencia"
+    }]
+  },
   "resources" : [{
     "path": "/res/browning",
     "files": [{

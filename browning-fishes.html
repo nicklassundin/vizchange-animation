@@ -1,0 +1,83 @@
+<!-- extends default--><!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/browning.css">
+        <link rel="stylesheet" type="text/css" href="css/z-axis.css">
+        <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
+        <script src="client/bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    </head>	<body>
+    <script type="text/javascript">
+        ((acts) => {
+            gsap.registerPlugin(ScrollTrigger);
+    
+            acts = acts.split(",");
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+            window.addEventListener('load', function () {
+                /*
+                const headings = gsap.utils.toArray(".caption");
+                const sections = gsap.utils.toArray(".segment")
+                headings.forEach((title, i) => {
+                    gsap.to(title,
+                            {
+                                ease: 'power1.inOut',
+                                scrollTrigger: {
+                                    trigger: sections[i],
+                                    start: 'top top',
+                                    end: 'bottom top',
+                                    scrub: true,
+                                    pin: true
+                                },
+                            })
+                });
+    
+                 */
+                acts.forEach(each => {
+                    switch (each) {
+                        case 'imersion':
+                            new Imersive();
+                            break;
+                        case 'discovery':
+                            new Discovery();
+                            break;
+                        case 'fishes':
+                            new Fishes();
+                            break;
+                        default:
+                    }
+                })
+    
+                ScrollTrigger.refresh()
+            })
+        })("fishes")
+    </script>        <div class="content" id=fishes>
+                <div id=dive-intro class="segment">
+                    
+                        <div class="captions">
+                    </div>                </div>
+                <div id=dive-yesterday class="segment">
+                    
+                        <div class="captions">
+                    </div>                </div>
+                <div>
+                    
+                        <image class="image-block ground-front" id=char src=/vizchange-animation/res/browning/fishes/arctic_char.png></image>
+                        <image class="image-block ground-front" id=barbel src=/vizchange-animation/res/browning/fishes/barbel.png></image>
+                        <image class="image-block ground-front" id=trout src=/vizchange-animation/res/browning/fishes/brown_trout.png></image>
+                        <image class="image-block ground-front" id=grayling src=/vizchange-animation/res/browning/fishes/grayling.png></image>
+                        <image class="image-block ground-front" id=minnow src=/vizchange-animation/res/browning/fishes/minnow.png></image>
+                        <image class="image-block ground-front" id=perch src=/vizchange-animation/res/browning/fishes/perch.png></image>
+                        <image class="image-block ground-front" id=pike src=/vizchange-animation/res/browning/fishes/pike.png></image>
+                        <image class="image-block ground-front" id=salmon src=/vizchange-animation/res/browning/fishes/salmon.png></image>
+                </div>
+        </div>
+    
+    <!--
+    <div class="bottom"></div>
+    <div class="right-side"></div>
+    -->	</body>
+</html>

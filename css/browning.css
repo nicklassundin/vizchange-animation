@@ -1,12 +1,14 @@
 
-html, body *{
-	padding:0;
-	overflow-x: hidden;
-}
 
 body {
 	background-color: #508ef2;
 }
+html, body, body * {
+	padding: 0 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
 
 .window {
 	max-height: 1080px;
@@ -14,7 +16,6 @@ body {
 }
 
 .content {
-	padding:0;
 	position: relative;
 	margin: 0;
 	display: inline-block;
@@ -22,7 +23,7 @@ body {
 
 
 
-.sections * {
+.sections {
 	/*opacity: 0!important;
      */
 	position: fixed!important;
@@ -30,7 +31,6 @@ body {
 	width: auto!important;
 	left: 0!important;
 	top: 0!important;
-	padding: 0!important;
 	/*object-position: 0% top!important;
 
      */
@@ -38,18 +38,26 @@ body {
 }
 
 .header {
-	position: absolute;
 	z-index: 2501!important;
+	position: absolute;
+}
+.fotnote {
+	z-index: 25000!important;
+	position: relative;
+}
+.header, .fotnote {
 	top: 50vh;
-	min-height: 15vh;
 	width: 100%;
-	background-color: white;
+	padding: 2vh 0 2vh;
 	text-align: center;
+	background-color: #eeeeee;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 0.2vw;
 }
 
 .segment {
 	margin:0;
-	padding:0;
 }
 .title {
 	/*
@@ -59,19 +67,22 @@ body {
 }
 .button {
 	background-color: #527cfa;
-	border-radius: 28px;
-	-webkit-border-radius:28px;
-	-moz-border-radius:28px;
-	padding:10px 23px;
-}
+	padding: 1vw 2vh;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0.2vw;
 
-.menu, .menu * {
 	text-align: center;
 	font-family: Helvetica;
 	text-decoration: none;
 	font-weight: bold;
-	letter-spacing: .02em;
-	color: #eeeeee;
+	letter-spacing: .05em;
+	color: #eeffee;
+}
+
+.menu, .menu * {
+	overflow-x: visible;
+	padding: 2vh 2vw;
 }
 
 .image-block *, .image-block{

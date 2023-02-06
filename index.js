@@ -25,22 +25,56 @@ app.get("/browning-discovery", (req, res) => {
 		actsID: ['discovery'],
 	})
 })
-app.render(
-	"browning-github.hbs",
-	browning,
-	(err, str) => {
-		if (err) {
-			throw err;
-		}
-		fs.writeFile("index.html", str, (err) => {
-				if (err) {
-					console.error(err);
-				}
-			}
-		);
-	}
-);
 
+app.get("/browning-fishes", (req, res) => {
+	res.render("browning.hbs", {
+		acts: [browning.acts.fishes],
+		actsID: ['fishes'],
+	})
+})
+
+app.render("browning.hbs", {
+	acts: [browning.acts.imersion],
+	actsID: ['imersion']
+}, (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("subpages/browning/imersion.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
+app.render("browning.hbs", {
+	acts: [browning.acts.discovery],
+	actsID: ['discovery'],
+}, (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("subpages/browning/discovery.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
+app.render("browning.hbs", {
+	acts: [browning.acts.fishes],
+	actsID: ['fishes'],
+},  (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("subpages/browning/fishes.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
 
 
 app.use("/css", express.static(`${__dirname}/css`));
@@ -65,4 +99,68 @@ app.use('/res/:path/:scen/*', function(req,res){
 	}
 })
 
+// TODO github optimization
 
+app.render("browning-github.hbs", {
+	acts: [browning.acts.imersion],
+	actsID: ['imersion']
+}, (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("browning-imersive.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
+app.render("browning-github.hbs", {
+	acts: [browning.acts.discovery],
+	actsID: ['discovery'],
+}, (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("browning-discovery.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
+app.render("browning-github.hbs", {
+	acts: [browning.acts.fishes],
+	actsID: ['fishes'],
+},  (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("browning-fishes.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
+
+
+
+/*
+app.render(
+	"browning-github.hbs",
+	browning,
+	(err, str) => {
+		if (err) {
+			throw err;
+		}
+		fs.writeFile("index.html", str, (err) => {
+				if (err) {
+					console.error(err);
+				}
+			}
+		);
+	}
+);
+
+ */

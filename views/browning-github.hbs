@@ -17,26 +17,17 @@
             {{/each}}
         </div>
     {{/each}}
-    <div class="content" id="credit">
+    {{#if next.redirect includeZero=true}}
         <div class="segment">
-            <div class="captions">
-                <div class="caption">
-                    <p>TODO Credit</p>
+            <div class="fotnote">
+                <div class="menu">
+                    {{#each next.redirect}}
+                        <a class="button" href="{{this.href}}">{{this.text}}</a>
+                    {{/each}}
                 </div>
             </div>
         </div>
-    </div>
-    <!--
-    <div class="content" id="end-div">
-        <div id="end-segment" class="segment">
-            <div class="captions">
-                <div class="caption">
-                    END
-                </div>
-            </div>
-        </div>
-   </div>
-   -->
+    {{/if}}
     {{> margin}}
 	</body>
 </html>

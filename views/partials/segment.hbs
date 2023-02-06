@@ -9,14 +9,20 @@
         </div>
     </div>
 {{/if}}
-<div class="captions">
+    <div class="captions">
     {{#each text}}
         {{#if text includeZero=true}}
-            <p class="caption">
+            {{#if this.class includeZero=true}}
+                <p class="{{this.class}}" id={{this.id}}>
+            {{else}}
+                <p class="caption" id={{this.id}}>
+            {{/if}}
                 <strong>
                     {{this.header}}
                 </strong>
-                <br>
+                {{#if this.header includeZero=true}}
+                    <br>
+                {{/if}}
                 {{this.text}}
             </p>
         {{/if}}

@@ -11,15 +11,25 @@ export class Discovery {
             ['#fg1', '#fg2', '#fg3'],
             ['#D1', '#D2', '#D3'],
             '#dive-tomorrow',
-            ['#bubbles', '#carbon', '#extra', '#fishes', '#people'],
-            ['#fishes2', '#people2', '#zoom'],
-            ['#fishes3', '#people3', '#nutri1', '#nutri2', '#nutri3', '#ice'])
+            {
+                1: ['#bubbles', '#carbon', '#extra', '#fishes', '#people'],
+                2: ['#fishes2', '#people2', '#zoom'],
+                3: ['#fishes3', '#people3', '#nutri1', '#nutri2', '#nutri3', '#ice']
+            },
+            {
+                1: '#dive-yesterday',
+                2: '#dive-today',
+                3: '#dive-tomorrow',
+            })
 
         //let dive_yester = new verticalAnimation('#dive-yesterday', 'landscape', ['#title'], ['#bg2'], ['#fg1', '#fg2', '#fg3'], ['#d1', '#d2', '#d3'])
-        dive.addLakeAlign('intro');
-        dive.addVertical('yesterday')
-        dive.addVertical('today');
-        dive.addVertical('tomorrow')
+        dive.addLakeAlign(0);
+
+        dive.addVertical('>');
+        dive.addVertical('>');
+        dive.addVertical('>');
+
+        dive.fadeOut('>');
 
 
     }
