@@ -1,0 +1,29 @@
+{{#if title includeZero=true}}
+    <div class="header">
+        <h1 class="title">{{title}}</h1>
+        <div class="menu">
+            {{#each menu}}
+                <a class="button" href="/vizchange-animation{{this.href}}">{{this.text}}</a>
+            {{/each}}
+        </div>
+    </div>
+{{/if}}
+<div class="captions">
+    {{#each text}}
+        {{#if text includeZero=true}}
+            {{#if this.class includeZero=true}}
+            <p class="{{this.class}}" id={{this.id}}>
+            {{else}}
+            <p class="caption" id={{this.id}}>
+            {{/if}}
+            <strong>
+                {{this.header}}
+            </strong>
+            {{#if this.header includeZero=true}}
+                <br>
+            {{/if}}
+            {{this.text}}
+        </p>
+        {{/if}}
+    {{/each}}
+</div>

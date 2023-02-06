@@ -33,48 +33,6 @@ app.get("/browning-fishes", (req, res) => {
 	})
 })
 
-app.render("browning.hbs", {
-	acts: [browning.acts.imersion],
-	actsID: ['imersion']
-}, (err, str) => {
-	if (err) {
-		throw err;
-	}
-	fs.writeFile("subpages/browning/imersion.html", str, (err) => {
-			if (err) {
-				console.error(err);
-			}
-		}
-	);
-})
-app.render("browning.hbs", {
-	acts: [browning.acts.discovery],
-	actsID: ['discovery'],
-}, (err, str) => {
-	if (err) {
-		throw err;
-	}
-	fs.writeFile("subpages/browning/discovery.html", str, (err) => {
-			if (err) {
-				console.error(err);
-			}
-		}
-	);
-})
-app.render("browning.hbs", {
-	acts: [browning.acts.fishes],
-	actsID: ['fishes'],
-},  (err, str) => {
-	if (err) {
-		throw err;
-	}
-	fs.writeFile("subpages/browning/fishes.html", str, (err) => {
-			if (err) {
-				console.error(err);
-			}
-		}
-	);
-})
 
 
 app.use("/css", express.static(`${__dirname}/css`));
