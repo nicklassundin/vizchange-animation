@@ -1,0 +1,60 @@
+{
+  "id": "evidence",
+  "scens": [{
+    "id": "map-scene",
+    "menu": [],
+    "text": [{
+      "id": "map-scene-text 1",
+      "header": "Sweden’s surface is 9% lake, which shows how important lakes are to the country’s environment.",
+      "text": "The Arctic, known for its negative temperatures most of the year, hosts quite a few of Sweden’s lakes. Scientists have been studying them closely since 1913, allowing us to see what’s been happening to these precious ecosystems over the past hundred-plus years."
+    }]
+  }],
+  "next": {
+    "id": "next",
+    "redirect": [{
+      "text": "Immersion",
+      "href": "/browning-imersive"
+    },{
+      "text": "Discovery Dive",
+      "href": "/browning-discovery"
+    },{
+      "text": "Fish Stories",
+      "href": "/browning-fishes"
+    },{
+      "text": "Local Evidencia",
+      "href": "/browning-evidencia"
+    }]
+  },
+  "resources": [{
+    "path": "/res/browning",
+    "files": [{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/arctic.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/map.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/percentage/1.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/percentage/2.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/percentage/3.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/percentage/4.png"
+    },{
+      "id": "arctic",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/map/percentage/5.png"
+    }]
+  }]
+}
