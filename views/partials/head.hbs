@@ -3,7 +3,14 @@
     <link rel="stylesheet" type="text/css" href="css/browning.css">
     <link rel="stylesheet" type="text/css" href="css/z-axis.css">
     <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
+
+    {{#each acts}}
+        {{#if this.id includeZero=true}}
+            <link rel="stylesheet" type="text/css" href="css/browning_{{this.id}}.css"></link>
+        {{/if}}
+    {{/each}}
     <script src="client/bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
 </head>

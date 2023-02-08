@@ -1,6 +1,6 @@
 <!-- extends default--><!DOCTYPE html>
 <html>
-    {{> head}}
+    {{> head this}}
 	<body>
     {{> script this}}
     {{#each acts}}
@@ -11,7 +11,7 @@
                 </div>
             {{/each}}
             {{#each this.resources}}
-                <div>
+                <div class="image-container">
                     {{> resources parameters=this }}
                 </div>
             {{/each}}

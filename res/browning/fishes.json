@@ -1,18 +1,80 @@
 {
   "id": "fishes",
-  "scens": [
-    {
-      "id": "dive-intro"
-    },{
-    "id": "dive-yesterday",
+  "scens": [{
+    "id": "char-scene",
     "menu": [],
     "text": [{
-      "id": "dive-yesterday-text 1",
+      "id": "char-scene-text 1",
       "header": "",
-      "text": ""
+      "text": "arctic char (salvelinus alpinus): loves the cold winter, but struggles in the heat average size / 30 - 50 cm"
+    }]
+  },{
+      "id": "barbel-scene",
+      "menu": [],
+      "text": [{
+        "id": "barbel-scene-text 1",
+        "header": "",
+        "text": "barbel (barbus barbus): is a culinary archaeologist; will always dig for food!\naverage size / 40 - 60 cm"
+      }]
+    },{
+      "id": "trout-scene",
+      "menu": [],
+      "text": [{
+        "id": "trout-scene-text 1",
+        "header": "",
+        "text": "brown trout (salmo trutta): has trouble seeing where it’s going, making it easy prey\naverage size / 30 - 50 cm"
+      }]
+    },{
+      "id": "grayling-scene",
+      "menu": [],
+      "text": [{
+        "id": "grayling-scene-text 1",
+        "header": "",
+        "text": "grayling (Thymallus thumallus): is social among fellow grayling, but is not a team player when it comes to other species\naverage size / 30 - 50 cm"
+      }]
+    },{
+      "id": "minnow-scene",
+      "menu": [],
+      "text": [{
+        "id": "minnow-scene-text 1",
+        "header": "",
+        "text": "minnow (phoxinus phoxinus): has a tiny body but a big appetite, adapting its prey as needed\naverage size / 4 - 8 cm"
+      }]
+    },{
+      "id": "perch-scene",
+      "menu": [],
+      "text": [{
+        "id": "perch-scene-text 1",
+        "header": "",
+        "text": "perch (perca fluviatilis): is able to find food in the dark!\naverage size / 10 - 25 cm"
+      }]
+    },{
+      "id": "pike-scene",
+      "menu": [],
+      "text": [{
+        "id": "pike-scene-text 1",
+        "header": "",
+        "text": "pike (esox lucius): enjoys a warm bath—even big predators like luxury\naverage size / 40 - 60 cm"
+      },{
+        "id": "salmon-text 1",
+        "header": "",
+        "text": ""
+      }]
+    },{
+      "id": "salmon-scene",
+      "menu": [],
+      "text": [{
+        "id": "salmon-text 1",
+        "header": "",
+        "text": ""
+      }]
+    },{
+    "id": "fishes-outro",
+    "text": [{
+      "id": "fishes-outro-text",
+      "text": "During winter, food is rarer and the lake temperature is generally quite low—but it’s a bit warmer at the bottom, so fish tend to move low and slow. During summer, the food is back and the temperatures are warmer at the top, so fish move up and get around."
     }]
   }],
-
   "next": {
     "id": "next",
     "redirect": [{
@@ -35,31 +97,54 @@
       "id": "char",
       "level": "ground-front",
       "file": "/res/browning/fishes/arctic_char.png"
-    },{
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "barbel",
       "level": "ground-front",
       "file": "/res/browning/fishes/barbel.png"
-    },{
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "trout",
       "level": "ground-front",
       "file": "/res/browning/fishes/brown_trout.png"
-    },{
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "grayling",
       "level": "ground-front",
       "file": "/res/browning/fishes/grayling.png"
-    },{
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "minnow",
       "level": "ground-front",
       "file": "/res/browning/fishes/minnow.png"
-    },{
-      "id": "perch",
-      "level": "ground-front",
-      "file": "/res/browning/fishes/perch.png"
-    },{
+    }]
+  },{
+      "path": "/res/browning",
+      "files": [
+        {
+          "id": "perch",
+          "level": "ground-front",
+          "file": "/res/browning/fishes/perch.png"
+        }
+      ]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "pike",
       "level": "ground-front",
       "file": "/res/browning/fishes/pike.png"
-    },{
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
       "id": "salmon",
       "level": "ground-front",
       "file": "/res/browning/fishes/salmon.png"

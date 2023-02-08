@@ -1,0 +1,22 @@
+
+body {
+    background-color: rgb(17, 29, 44);
+}
+.content, .content *{
+    overflow: hidden;
+}
+.content {
+    background: linear-gradient(to bottom,
+    rgba(99, 167, 191, 1),
+    rgba(94, 86, 179, 1),
+    rgba(72, 139, 163, 1),
+    rgba(79, 124, 179, 1),
+    rgba(52, 115, 140, 1),
+    rgba(48, 92, 145, 1),
+    rgba(39, 82, 145, 1),
+    rgba(19, 58, 110, 1),
+    rgba(10, 50, 80, 1),
+    rgba(40, 41, 100, 1),
+    rgba(14, 52, 94, 1),
+    rgb(17, 29, 44));
+}

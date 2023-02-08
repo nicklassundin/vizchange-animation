@@ -5,9 +5,12 @@
         <link rel="stylesheet" type="text/css" href="css/browning.css">
         <link rel="stylesheet" type="text/css" href="css/z-axis.css">
         <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
+    
+                <link rel="stylesheet" type="text/css" href="css/browning_fishes.css"></link>
         <script src="client/bundle.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
     </head>	<body>
     <script type="text/javascript">
         ((acts) => {
@@ -55,23 +58,126 @@
             })
         })("fishes")
     </script>        <div class="content" id=fishes>
-                <div id=dive-intro class="segment">
+                <div id=char-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=char-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                arctic char (salvelinus alpinus): loves the cold winter, but struggles in the heat average size / 30 - 50 cm
+                            </p>
+                    </div>                </div>
+                <div id=barbel-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=barbel-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                barbel (barbus barbus): is a culinary archaeologist; will always dig for food!
+                    average size / 40 - 60 cm
+                            </p>
+                    </div>                </div>
+                <div id=trout-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=trout-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                brown trout (salmo trutta): has trouble seeing where it’s going, making it easy prey
+                    average size / 30 - 50 cm
+                            </p>
+                    </div>                </div>
+                <div id=grayling-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=grayling-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                grayling (Thymallus thumallus): is social among fellow grayling, but is not a team player when it comes to other species
+                    average size / 30 - 50 cm
+                            </p>
+                    </div>                </div>
+                <div id=minnow-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=minnow-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                minnow (phoxinus phoxinus): has a tiny body but a big appetite, adapting its prey as needed
+                    average size / 4 - 8 cm
+                            </p>
+                    </div>                </div>
+                <div id=perch-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=perch-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                perch (perca fluviatilis): is able to find food in the dark!
+                    average size / 10 - 25 cm
+                            </p>
+                    </div>                </div>
+                <div id=pike-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=pike-scene-text 1>
+                                <strong>
+                                    
+                                </strong>
+                                pike (esox lucius): enjoys a warm bath—even big predators like luxury
+                    average size / 40 - 60 cm
+                            </p>
+                    </div>                </div>
+                <div id=salmon-scene class="segment">
                     <!--TODO rename to type_github -->
                     <div class="captions">
                     </div>                </div>
-                <div id=dive-yesterday class="segment">
+                <div id=fishes-outro class="segment">
                     <!--TODO rename to type_github -->
                     <div class="captions">
+                                <p class="caption" id=fishes-outro-text>
+                                <strong>
+                                    
+                                </strong>
+                                During winter, food is rarer and the lake temperature is generally quite low—but it’s a bit warmer at the bottom, so fish tend to move low and slow. During summer, the food is back and the temperatures are warmer at the top, so fish move up and get around.
+                            </p>
                     </div>                </div>
                 <div>
                     
                         <image class="image-block ground-front" id=char src=/vizchange-animation/res/browning/fishes/arctic_char.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=barbel src=/vizchange-animation/res/browning/fishes/barbel.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=trout src=/vizchange-animation/res/browning/fishes/brown_trout.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=grayling src=/vizchange-animation/res/browning/fishes/grayling.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=minnow src=/vizchange-animation/res/browning/fishes/minnow.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=perch src=/vizchange-animation/res/browning/fishes/perch.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=pike src=/vizchange-animation/res/browning/fishes/pike.png></image>
+                </div>
+                <div>
+                    
                         <image class="image-block ground-front" id=salmon src=/vizchange-animation/res/browning/fishes/salmon.png></image>
                 </div>
         </div>
@@ -86,8 +192,11 @@
                 </div>
             </div>
     
-    <!--
     <div class="bottom"></div>
+    
     <div class="right-side"></div>
+    
+    <div class="bottom-right"></div>
+    <!--
     -->	</body>
 </html>
