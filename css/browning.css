@@ -24,7 +24,10 @@ html, body, body * {
 }
 
 .content {
+	/*
 	overflow: hidden;
+
+	 */
 	position: relative;
 	margin: 0;
 	display: inline-block;
@@ -118,7 +121,10 @@ html, body, body * {
 	position: relative;
 }
 .menu, .menu * {
+	/*
 	overflow-x: visible;
+
+	 */
 	padding: 2vh 2vw;
 }
 
