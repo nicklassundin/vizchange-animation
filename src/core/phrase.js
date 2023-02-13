@@ -52,6 +52,7 @@ export class Phrase {
         this.config.scrollTrigger.trigger = id
         this.timeline = gsap.timeline(this.config)
         this.ids = ids
+        this.timelines = {};
     }
     getText(id) {
         return gsap.utils.toArray(`${id}-text`)
@@ -60,17 +61,53 @@ export class Phrase {
     getTimeline() {
         return this.timeline;
     }
-    fadeText(text, start = '<', pause = 0, id) {
+    fade(text, start = '<', pause = 0, id) {
         text.map((each, i) => {
-            this.fadeInText(each, start, id)
-            this.fadeOutText(each, pause, id)
+            this.fadeIn(each, start, id)
+            this.fadeOutPause(each, pause, id)
             start = '>';
         })
     }
-    fadeInText(text, start = '<', id) {
+    fadeText(start = '<', pause = 0, id) {
+        this.fade(this.getText(`#${id}-scene`), start, pause, id)
+    }
+    fadeIn(text, start = '<', id) {
         this.getTimeline(id).from(text, {opacity: 0, duration: 1}, start)
     }
-    fadeOutText(text, pause, id) {
+    fadeOutPause(text, pause, id) {
         this.getTimeline(id).to(text, {opacity: 0, duration: 1}, `${pause+1}`)
+    }
+    fadeOut(text, start, id) {
+        this.getTimeline(id).to(text, {opacity: 0, duration: 1}, start)
+    }
+    createTimeline(id, config, callback = (timeline) => timeline) {
+        this.timelines[id] = gsap.timeline(config)
+        this.timeline.add(this.timelines[id]);
+
+        return callback(this.timelines[id])
+    }
+    createTextTimeline(id, callback) {
+        let config = {
+            scrollTrigger:{
+                trigger: `#${id}-scene`,
+                start: "top top",
+                end: "bottom top",
+                //markers: true,
+                pin: true,
+                //pinnedContainer: true,
+                scrub: true,
+                //   snap: snap
+            }
+        }
+        return this.createTimeline(`${id}-text`, config, callback)
+    }
+    rightIn (target, start, id) {
+        this.getTimeline(id).from(target, { x: '100%', duration: 1}, start)
+    }
+    rightOut (target, start = '>', id, duration = 1) {
+        this.getTimeline(id).to(target, { x: '50%', y: '-25%', duration: duration}, start)
+    }
+    bottomIn (target, start = '>', id) {
+        this.getTimeline(id).from(target, { y: '100%', duration: 1}, start)
     }
 }

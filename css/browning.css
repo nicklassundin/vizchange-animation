@@ -1,5 +1,14 @@
 
 
+@media screen and (orientation:landscape) {
+
+}
+
+:root {
+	--main-bg-color: example;
+	--min-height: 50%;
+}
+
 body {
 	background-color: #508ef2;
 	max-height: 540px;
@@ -60,13 +69,15 @@ html, body, body * {
 }
 .header, .fotnote {
 	top: 50vh;
-	width: 100vw;
-	max-width: calc(1.06*960px);
-	min-width: 600px;
-	height: calc(100vh * 0.2);
+
+	width: calc(960px - 6vw);;
+	max-width: 100vw;
+	height: auto;
 	max-height: calc(560px * 0.2);
-	padding: 2vh 0;
+	padding: 1vh 0;
 	text-align: center;
+
+
 
 	justify-content: center;
 	background-color: #eeeeee;
@@ -95,45 +106,41 @@ html, body, body * {
 
 .button {
 	background-color: #527cfa;
-	padding: 1vw 2vh;
-
-
+	padding: 1vw 1vh;
 	border-radius: 10px;
 	border-style: solid;
 	border-width: 0.2vh;
 	border-color: #111111;
-	max-border-width: calc(560*0.2);
-
 	text-align: center;
+	font-size: 1em;
 	font-family: Helvetica;
 	text-decoration: none;
 	font-weight: bold;
-	letter-spacing: .05em;
 	color: #eeffee;
 }
 .button:hover {
 	background-color:#002ead;
 	transition: 0.7s;
 }
-.button:out
 
 .menu {
 	position: relative;
-}
-.menu, .menu * {
-	/*
-	overflow-x: visible;
-
-	 */
 	padding: 2vh 2vw;
 }
+.menu, .menu * {
 
-.image-block *, .image-block{
+	overflow: hidden;
+	white-space: nowrap;
+	position: center;
+}
+
+.image-block *, .image-block {
 	border-bottom: 5px solid blue;
 	position: fixed!important;
-	height: 100vw!important;
+	height: 100vh!important;
 	max-height: calc(540px);
-	width: auto!important;
+	width: auto;
+
 	left: 0!important;
 	top: 0!important;
 	padding: 0!important;
@@ -156,6 +163,7 @@ html, body, body * {
 	width: calc(960px - 6vw);;
 	max-width: 960px;
 	height: calc(100vh - 540px);
+	min-height: calc(100vh - 540px);
 	bottom: 0;
 	left: 0;
 	z-index: 30000;

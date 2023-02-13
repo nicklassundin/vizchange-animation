@@ -17,19 +17,19 @@ export class Fishes extends Phrase{
                 //   snap: snap
             }
         })
-        this.fadeText(this.getText('#fishes-outro'), 0, 4, 'fishes-outro')
+        this.fade(this.getText('#fishes-outro'), 0, 4, 'fishes-outro')
 
         this.createTimeline('char')
-        this.createTimeline('barbel', '>')
-        this.createTimeline('trout', '>')
-        this.createTimeline('grayling', '>')
-        this.createTimeline('minnow', '>')
-        this.createTimeline('perch', '>')
-        this.createTimeline('pike', '>')
-        this.createTimeline('salmon', '>')
+        this.createTimeline('barbel')
+        this.createTimeline('trout')
+        this.createTimeline('grayling')
+        this.createTimeline('minnow')
+        this.createTimeline('perch')
+        this.createTimeline('pike')
+        this.createTimeline('salmon')
     }
     createTimeline(id) {
-        this.timelines[id] = gsap.timeline({
+        super.createTimeline(id,{
             scrollTrigger:{
                 trigger: `#${id}-scene`,
                 start: "top center",
@@ -41,7 +41,6 @@ export class Fishes extends Phrase{
                 //   snap: snap
             }
         })
-        this.timeline.add(this.timelines[id]);
         this.addFish(id, 0)
         return this.timelines[id]
     }
@@ -73,7 +72,7 @@ export class Fishes extends Phrase{
             },
             duration: duration,
         }, '>')
-        this.fadeText(this.getText(`#${fish}-scene`), '<', duration, fish)
+        this.fadeText('<', duration, fish)
 
         this.timelines[fish].to(`#${fish}`, {
 

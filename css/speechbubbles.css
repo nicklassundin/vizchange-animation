@@ -35,13 +35,15 @@
  */
 
 p{
+
+    font-size: 1em;
     /*
     position: relative;
 
     position: fixed;
 
      */
-    padding: 5px 5px 5px 5px;
+    padding: 1vh;
     /*
     background: rgba(202, 160, 104, 0.9);
      */
@@ -58,7 +60,6 @@ p:before{
     content: "\201C"; /*Unicode for Left Double Quote*/
     /*Font*/
     font-family: Vemana2000;
-    font-size: 60px;
     font-weight: bold;
     /*Positioning*/
     /*

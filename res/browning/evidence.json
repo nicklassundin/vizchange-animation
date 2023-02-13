@@ -8,6 +8,46 @@
       "header": "Sweden’s surface is 9% lake, which shows how important lakes are to the country’s environment.",
       "text": "The Arctic, known for its negative temperatures most of the year, hosts quite a few of Sweden’s lakes. Scientists have been studying them closely since 1913, allowing us to see what’s been happening to these precious ecosystems over the past hundred-plus years."
     }]
+  },{
+    "id": "context-scene",
+    "menu": [],
+    "text": [{
+      "id": "context-scene-text 1",
+      "header": "Here is what a typical high-latitude lake looks like.",
+      "text": "- The vegetation, composed of birch and wild grass, is slowly moving north (this, again, is called “Arctic greening”) but collapses frequently, too (also known as “browning”)."
+    },{
+      "id": "context-scene-text 2",
+      "header": "",
+      "text": "- The area is quite rocky, as the lake sits on a bed of rocks."
+    },{
+      "id": "context-scene-text 2",
+      "header": "",
+      "text": "- Organic matter is transported into the lakes by runoff from higher lakes, precipitation, thawed permafrost, and wind."
+    }]
+  },{
+    "id": "summer-scene",
+    "menu": [],
+    "text": [{
+      "id": "summer-scene-text 1",
+      "header": "Summer to autumn",
+      "text": "To see how the lake changes, switch between seasons and compare throughout the years. Click on the ice cover for flat charts to appear."
+    },{
+      "id": "summer-scene-text 2",
+      "header": "",
+      "text": "Compare when the ice formed and how long it stayed each year. \nIce forms, creating oxygen bubbles. The longer it sticks around, the more algae will grow on it!"
+    }]
+  },{
+    "id": "winter-scene",
+    "menu": [],
+    "text": [{
+      "id": "winter-scene-text 1",
+      "header": "Winter to spring",
+      "text": "All of this data is collected thanks to scientists’ fieldwork, as they sample the water at all points of the year and in any weather!"
+    },{
+      "id": "winter-scene-text 2",
+      "header": "",
+      "text": "Compare when the ice broke, and how thick it got each year.\nIce breaks in crystals and almost never gets past a meter thick, but it’s enough to hold a truck!"
+    }]
   }],
   "next": {
     "id": "next",
@@ -32,29 +72,114 @@
       "level": "ground-front",
       "file": "/res/browning/evidence/map/arctic.png"
     },{
-      "id": "arctic",
+      "id": "map",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/map.png"
     },{
-      "id": "arctic",
+      "id": "perc-1",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/percentage/1.png"
     },{
-      "id": "arctic",
+      "id": "perc-2",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/percentage/2.png"
     },{
-      "id": "arctic",
+      "id": "perc-3",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/percentage/3.png"
     },{
-      "id": "arctic",
+      "id": "perc-4",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/percentage/4.png"
     },{
-      "id": "arctic",
+      "id": "perc-5",
       "level": "ground-front",
       "file": "/res/browning/evidence/map/percentage/5.png"
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
+      "id": "context-1",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/1.png"
+    },{
+      "id": "context-2",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/2.png"
+    },{
+      "id": "context-3",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/3.png"
+    },{
+      "id": "context-4",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/4.png"
+    },{
+      "id": "context-5",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/5.png"
+    },{
+      "id": "context-6",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/6.png"
+    },{
+      "id": "context-7",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/7.png"
+    },{
+      "id": "context-8",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/context/8.png"
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
+      "id": "summer-axonometric",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/axonometric.png"
+    },{
+      "id": "freeze",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/freeze.png"
+    },{
+      "id": "time",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/time.png"
+    },{
+      "id": "scientist-1",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/scientist/1.png"
+    },{
+      "id": "scientist-2",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/scientist/2.png"
+    },{
+      "id": "scientist-3",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/scientist/3.png"
+    },{
+      "id": "scientist-4",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/summer/scientist/4.png"
+    }]
+  },{
+    "path": "/res/browning",
+    "files": [{
+      "id": "winter-axonometric",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/winter/axonometric.png"
+    },{
+      "id": "break",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/winter/break.png"
+    },{
+      "id": "winter-scientist-1",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/winter/scientist/1.png"
+    },{
+      "id": "winter-scientist-2",
+      "level": "ground-front",
+      "file": "/res/browning/evidence/winter/scientist/2.png"
     }]
   }]
 }
