@@ -14,6 +14,36 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
     </head>	<body>
     <script type="text/javascript">
+    
+    
+        let innerHeight = window.innerHeight;
+        let innerWidth = window.innerWidth;
+        /*
+        switch (window.name) {
+            case 'simulator':
+                innerHeight = innerHeight*window.devicePixelRatio;
+                innerWidth = innerWidth*window.devicePixelRatio;
+            default:
+        }
+    
+         */
+    
+        let vh = innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh-store', `${vh}px`);
+    
+        let vw = innerWidth * 0.01;
+        document.documentElement.style.setProperty('--vw-store', `${vw}px`);
+    
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            vh = innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh-store', `${vh}px`);
+    
+    
+            vw = innerWidth * 0.01;
+            document.documentElement.style.setProperty('--vw-store', `${vw}px`);
+        });
+    
         ((acts) => {
             gsap.registerPlugin(ScrollTrigger);
     
@@ -21,6 +51,8 @@
             window.onbeforeunload = function () {
                 window.scrollTo(0, 0);
             }
+    
+    
             window.addEventListener('load', function () {
                 /*
                 const headings = gsap.utils.toArray(".caption");

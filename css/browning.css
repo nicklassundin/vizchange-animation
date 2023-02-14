@@ -1,14 +1,17 @@
 
-
-@media screen and (orientation:landscape) {
-
-}
-
 :root {
+	--vh-store: 1vh;
+	--vw-store: 1vw;
+	--vh: var(--vh-store, 1vh);
+	--vw: var(--vw-store, 1vw);
 	--main-bg-color: example;
 	--min-height: 50%;
-	--left-margin: calc((100vw - 980px) / 2);
+	--max-height: calc(min(100 * var(--vh), 540px));
+	--left-margin: calc((100% - 980px) / 2);
 	--left-margin-not-zero: calc(max(var(--left-margin), -1 * var(--left-margin)) / 2 + var(--left-margin)/2);
+	--right-side-bottom: calc(100 * var(--vh) - var(--max-height));
+	--margin-border-height: calc(0.2 * var(--vh));
+	--margin-border-width: calc(0.2 * var(--vw));
 }
 
 
@@ -23,20 +26,8 @@
 
 body {
 	background-color: #508ef2;
-	/*
-	left-margin: var(--left-margin);
-	max-height: 540px;
-	max-width: 960px;
-
-	 */
 }
 
-
-/*
-body * {
-	max-height: 540px;
-}
- */
 html, body, body * {
 	padding: 0 0 0;
 	margin: 0;
@@ -49,16 +40,19 @@ html, body, body * {
 }
 
 .content {
-	width: 100vw;
-	max-width: 980px;
-	/*
-	overflow: hidden;
-
-	 */
+	width: calc(100 * var(--vw));
+	max-width: calc(100 * var(--vw));
 	position: relative;
 	margin: 0;
 	left: var(--left-margin-not-zero);
 	display: inline-block;
+}
+
+@media (orientation: landscape) {
+	.content {
+		width: 1000px;
+		max-width: 2000px;
+	}
 }
 
 
@@ -159,7 +153,7 @@ html, body, body * {
 	 */
 	position: fixed!important;
 	height: 100vh!important;
-	max-height: calc(540px);
+	max-height: var(--max-height);
 	width: auto;
 	top: 0!important;
 	/*
