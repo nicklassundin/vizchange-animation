@@ -17,12 +17,14 @@
             {{/each}}
         </div>
         {{#if next.redirect includeZero=true}}
-            <div class="segment">
-                <div class="fotnote">
-                    <div class="menu">
-                        {{#each next.redirect}}
-                            <a class="button" href="/vizchange-animation{{this.href}}">{{this.text}}</a>
-                        {{/each}}
+            <div class="content">
+                <div class="segment">
+                    <div class="fotnote">
+                        <div class="menu">
+                            {{#each next.redirect}}
+                                <a class="button" href="/vizchange-animation{{this.href}}">{{this.text}}</a>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
             </div>
