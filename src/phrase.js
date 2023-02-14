@@ -159,12 +159,15 @@ export class verticalAnimation {
         this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 1}, '<')
 
+
         this.ids.text[this.times-1].map((each, i) => {
             this.timeline.from(each, {opacity: 0, duration: 3}, '>-1')
         })
         this.ids.text[this.times-1].map((each, i) => {
             this.timeline.to(each, {opacity: 0, duration: 3}, '>-2')
         })
+
+
 
         this.timeline.to(this.ids.background, {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 1}, '<')

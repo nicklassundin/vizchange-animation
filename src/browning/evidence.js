@@ -32,7 +32,10 @@ export class Evidence extends Phrase {
 
     }
     addBoxAnimation (id, element, direction) {
-        this.createTextTimeline(id)
+        this.createTextTimeline(id, () => {
+            // TODO
+            //this.fadeText(0,  0, `${id}-text`)
+        })
         this.createTimeline(id, {
             scrollTrigger:{
                 trigger: `#${id}-scene`,

@@ -20,3 +20,6 @@ body {
     rgba(14, 52, 94, 1),
     rgb(17, 29, 44));
 }
+.transparent {
+    background: transparent;
+}

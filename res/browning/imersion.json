@@ -64,72 +64,72 @@
     "path": "/res/browning",
     "files": [{
       "id": "a1",
-      "level": "background",
+      "level": "10",
       "file": "/res/browning/imersion/a/1a.png"
     },{
       "id": "a2",
-      "level": "detail",
+      "level": "20",
       "file": "/res/browning/imersion/a/2a.png"
     },{
       "id": "a3",
-      "level": "ground",
+      "level": "30",
       "file": "/res/browning/imersion/a/3a.png"
     },{
       "id": "a4",
-      "level": "clouds",
+      "level": "1",
       "file": "/res/browning/imersion/a/4a.png"
     }]
   },{
     "path": "/res/browning",
     "files": [{
       "id": "b1",
-      "level": "background",
+      "level": "11",
       "file": "/res/browning/imersion/b/1b-background.png"
     },{
       "id": "b2",
-      "level": "detail-back",
+      "level": "12",
       "file": "/res/browning/imersion/b/2b-detail.png"
     },{
       "id": "b3",
-      "level": "clouds",
+      "level": "1",
       "file": "/res/browning/imersion/b/3b-clouds.png"
     },{
       "id": "b4",
-      "level": "ground-back",
+      "level": "19",
       "file": "/res/browning/imersion/b/4b-ground.png"
     }]
   },{
     "path": "/res/browning",
     "files": [{
       "id": "c1",
-      "level": "background",
+      "level": "9",
       "file": "/res/browning/imersion/c/1c-background.png"
     },{
       "id": "c2",
-      "level": "detail",
+      "level": "13",
       "file": "/res/browning/imersion/c/2c-detail.png"
     },{
       "id": "c3",
-      "level": "clouds",
+      "level": "1",
       "file": "/res/browning/imersion/c/3c-clouds.png"
     },{
       "id": "c4",
-      "level": "ground",
+      "level": "14",
       "file": "/res/browning/imersion/c/4c-ground.png"
     }]
   },{
     "path": "/res/browning",
     "files": [{
       "id": "d1",
-      "level": "background-back",
+      "level": "6",
       "file": "/res/browning/discovery/background_far.png"
     },{
       "id": "d2",
-      "level": "background",
+      "level": "7",
       "file": "/res/browning/imersion/d/2d-background.png"
     },{
       "id": "d3",
-      "level": "ground",
+      "level": "16",
       "file": "/res/browning/imersion/d/3d-water.png"
     }]
   }]

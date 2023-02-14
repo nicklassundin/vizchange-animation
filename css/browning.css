@@ -49,10 +49,7 @@ html, body, body * {
 }
 
 @media (orientation: landscape) {
-	.content {
-		width: 1000px;
-		max-width: 2000px;
-	}
+
 }
 
 

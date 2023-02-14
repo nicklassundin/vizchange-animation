@@ -14,7 +14,12 @@
 
 .captions {
     z-index: 50000!important;
+
+    /*
+    TODO set position to fixed
+     */
     position: sticky;
+    left: 1vw;
     top: 35%;
     margin: 0;
 

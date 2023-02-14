@@ -10,11 +10,11 @@ export class Imersive {
         let timeline = highPhrase.timeline
 
         let rainPhrase = new Phrase( '#rain', 'landscape', '#b4', '#b2', '#b1')
-        rainPhrase.addHorizontal()
+        rainPhrase.addHorizontal(1, 0.6)
         let rain = rainPhrase.timeline
 
         let mudPhrase = new Phrase( '#mud', 'landscape', '#c1', '#c4', '#c2')
-        mudPhrase.addHorizontal(1, 0.75);
+        mudPhrase.addHorizontal(1, 0.05);
         let mud = mudPhrase.timeline
 
 
