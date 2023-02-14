@@ -1,6 +1,7 @@
 
 .right-side, .bottom, .left-side {
     background-color: #eeeeee;
+    background: #ffffff;
     border-style: solid;
     border-color: #111111;
 }
@@ -25,6 +26,7 @@
     height: 100vw;
     max-height: calc(100% - (100% - var(--max-height)));
     background: #eeeeee;
+    background: #ffffff;
     z-index: 30001;
     bottom: var(--right-side-bottom);
     left: calc(960px + calc(var(--left-margin) - 3vw));
@@ -34,6 +36,7 @@
     border-width: var(--margin-border-height) var(--margin-border-width);
     border-color: #eeeeee;
     background: #eeeeee;
+    background: #ffffff;
     position: fixed;
     width: 100%;
     height: calc(100% - var(--max-height));
@@ -50,6 +53,7 @@
     height: 100vw;
     max-height: calc(100vh - (100vh - var(--max-height)));
     background: #eeeeee;
+    background: #ffffff;
     z-index: 30001;
     bottom: calc(100* var(--vh) - var(--max-height));
     left: 0;
@@ -59,6 +63,7 @@
     border-width: var(--margin-border-height) var(--margin-border-width);
     border-color: #eeeeee;
     background: #eeeeee;
+    background: #ffffff;
     position: fixed;
     width: calc(var(--left-margin) + 3vw);
     height: calc(100 * var(--vh) - var(--max-height));

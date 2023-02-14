@@ -138,8 +138,6 @@ html, body, body * {
 	padding: 2vh 2vw;
 }
 .menu, .menu * {
-
-	overflow: hidden;
 	white-space: nowrap;
 	position: center;
 }
