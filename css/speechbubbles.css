@@ -6,22 +6,38 @@
     height: 100vh;
     width: 100vw;
     top: 50%;
-    padding: 0px;
+    padding: 0;
+}
+.segment left {
+    left: 10px;
 }
 
 .captions {
-    z-index: 5000!important;
+    z-index: 50000!important;
     position: sticky;
     top: 35%;
     margin: 0;
+
+    pointer-events: none;
 }
 
 
 
 .caption {
-    max-width: 50%;
     padding: 10px;
-    margin: 0;
+}
+.caption-left  {
+    width: 50%;
+    max-width: calc(980px / 2);
+    float: left;
+    margin-right: 50%;
+}
+.caption-right{
+    margin: calc(100vw - 980px);
+    float: right;
+    width: 50%;
+    max-width: calc(980px / 2);
+    margin-left: 50%;
 }
 
 /*

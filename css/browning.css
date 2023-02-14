@@ -7,12 +7,28 @@
 :root {
 	--main-bg-color: example;
 	--min-height: 50%;
+	--left-margin: calc((100vw - 980px) / 2);
+	--left-margin-not-zero: calc(max(var(--left-margin), -1 * var(--left-margin)) / 2 + var(--left-margin)/2);
 }
+
+
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+	display: none;
+}
+
 
 body {
 	background-color: #508ef2;
+	/*
+	left-margin: var(--left-margin);
 	max-height: 540px;
 	max-width: 960px;
+
+	 */
 }
 
 
@@ -33,12 +49,15 @@ html, body, body * {
 }
 
 .content {
+	width: 100vw;
+	max-width: 980px;
 	/*
 	overflow: hidden;
 
 	 */
 	position: relative;
 	margin: 0;
+	left: var(--left-margin-not-zero);
 	display: inline-block;
 }
 
@@ -69,15 +88,12 @@ html, body, body * {
 }
 .header, .fotnote {
 	top: 50vh;
-
-	width: calc(960px - 6vw);;
+	width: calc(980px);
 	max-width: 100vw;
 	height: auto;
 	max-height: calc(560px * 0.2);
 	padding: 1vh 0;
 	text-align: center;
-
-
 
 	justify-content: center;
 	background-color: #eeeeee;
@@ -134,63 +150,27 @@ html, body, body * {
 	position: center;
 }
 
+.image-container {
+	position: relative;
+}
 .image-block *, .image-block {
+	/*
 	border-bottom: 5px solid blue;
+	 */
 	position: fixed!important;
 	height: 100vh!important;
 	max-height: calc(540px);
 	width: auto;
+	top: 0!important;
+	/*
 
 	left: 0!important;
-	top: 0!important;
 	padding: 0!important;
 	margin: 0!important;
 	object-position: 0% top!important;
+	 */
 	object-fit: cover!important;
 	pointer-events: none;
 }
 
-
-.right-side, .bottom {
-	background-color: #eeeeee;
-	border-style: solid;
-	border-color: #111111;
-}
-
-.bottom {
-	border-width: 0.2vh 0 0 0;
-	position: fixed;
-	width: calc(960px - 6vw);;
-	max-width: 960px;
-	height: calc(100vh - 540px);
-	min-height: calc(100vh - 540px);
-	bottom: 0;
-	left: 0;
-	z-index: 30000;
-}
-
-.right-side {
-	border-width: 0 0 0 0.2vw;
-	background-blend-mode: darken, luminosity;
-	position: fixed;
-	width: calc(3540/1080*100vw);
-	height: 100vw;
-	max-height: calc(100vh - (100vh - 540px));
-	background: #eeeeee;
-	z-index: 30001;
-	bottom: calc(100vh - 540px);
-	left: calc(960px - 6vw);
-}
-.bottom-right {
-	border-style: solid;
-	border-width: 0.2vh 0.2vw;
-	border-color: #eeeeee;
-	background: #eeeeee;
-	position: fixed;
-	width: calc(3540/1080*100vw);
-	height: calc(100vh - 540px);
-	z-index: 29000;
-	bottom: 0;
-	left: calc(960px - 6vw);
-}
 

@@ -29,10 +29,12 @@
     "menu": [],
     "text": [{
       "id": "summer-scene-text 1",
+      "class": "caption-right",
       "header": "Summer to autumn",
       "text": "To see how the lake changes, switch between seasons and compare throughout the years. Click on the ice cover for flat charts to appear."
     },{
       "id": "summer-scene-text 2",
+      "class": "caption-right",
       "header": "",
       "text": "Compare when the ice formed and how long it stayed each year. \nIce forms, creating oxygen bubbles. The longer it sticks around, the more algae will grow on it!"
     }]
@@ -41,10 +43,12 @@
     "menu": [],
     "text": [{
       "id": "winter-scene-text 1",
+      "class": "caption-right",
       "header": "Winter to spring",
       "text": "All of this data is collected thanks to scientists’ fieldwork, as they sample the water at all points of the year and in any weather!"
     },{
       "id": "winter-scene-text 2",
+      "class": "caption-right",
       "header": "",
       "text": "Compare when the ice broke, and how thick it got each year.\nIce breaks in crystals and almost never gets past a meter thick, but it’s enough to hold a truck!"
     }]

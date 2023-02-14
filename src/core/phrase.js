@@ -93,7 +93,7 @@ export class Phrase {
                 start: "top top",
                 end: "bottom top",
                 //markers: true,
-                pin: true,
+                //pin: true,
                 //pinnedContainer: true,
                 scrub: true,
                 //   snap: snap
