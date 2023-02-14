@@ -1,0 +1,191 @@
+<!-- extends default--><!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/browning.css">
+        <link rel="stylesheet" type="text/css" href="css/z-axis.css">
+        <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
+    
+                <link rel="stylesheet" type="text/css" href="css/browning_evidence.css"></link>
+        <script src="client/bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
+    </head>	<body>
+    <script type="text/javascript">
+        ((acts) => {
+            gsap.registerPlugin(ScrollTrigger);
+    
+            acts = acts.split(",");
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
+            window.addEventListener('load', function () {
+                /*
+                const headings = gsap.utils.toArray(".caption");
+                const sections = gsap.utils.toArray(".segment")
+                headings.forEach((title, i) => {
+                    gsap.to(title,
+                            {
+                                ease: 'power1.inOut',
+                                scrollTrigger: {
+                                    trigger: sections[i],
+                                    start: 'top top',
+                                    end: 'bottom top',
+                                    scrub: true,
+                                    pin: true
+                                },
+                            })
+                });
+    
+                 */
+                acts.forEach(each => {
+                    switch (each) {
+                        case 'imersion':
+                            new Imersive();
+                            break;
+                        case 'discovery':
+                            new Discovery();
+                            break;
+                        case 'fishes':
+                            new Fishes();
+                            break;
+                        case 'evidence':
+                            new Evidence();
+                            break;
+                        default:
+                    }
+                })
+    
+                ScrollTrigger.refresh()
+            })
+        })("evidence")
+    </script>        <div class="content" id=evidence>
+                <div id=map-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=map-scene-text 1>
+                                <strong>
+                                    Sweden’s surface is 9% lake, which shows how important lakes are to the country’s environment.
+                                </strong>
+                                    <br>
+                                The Arctic, known for its negative temperatures most of the year, hosts quite a few of Sweden’s lakes. Scientists have been studying them closely since 1913, allowing us to see what’s been happening to these precious ecosystems over the past hundred-plus years.
+                            </p>
+                    </div>                </div>
+                <div id=context-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=context-scene-text 1>
+                                <strong>
+                                    Here is what a typical high-latitude lake looks like.
+                                </strong>
+                                    <br>
+                                - The vegetation, composed of birch and wild grass, is slowly moving north (this, again, is called “Arctic greening”) but collapses frequently, too (also known as “browning”).
+                            </p>
+                                <p class="caption" id=context-scene-text 2>
+                                <strong>
+                                    
+                                </strong>
+                                - The area is quite rocky, as the lake sits on a bed of rocks.
+                            </p>
+                                <p class="caption" id=context-scene-text 2>
+                                <strong>
+                                    
+                                </strong>
+                                - Organic matter is transported into the lakes by runoff from higher lakes, precipitation, thawed permafrost, and wind.
+                            </p>
+                    </div>                </div>
+                <div id=summer-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=summer-scene-text 1>
+                                <strong>
+                                    Summer to autumn
+                                </strong>
+                                    <br>
+                                To see how the lake changes, switch between seasons and compare throughout the years. Click on the ice cover for flat charts to appear.
+                            </p>
+                                <p class="caption" id=summer-scene-text 2>
+                                <strong>
+                                    
+                                </strong>
+                                Compare when the ice formed and how long it stayed each year. 
+                    Ice forms, creating oxygen bubbles. The longer it sticks around, the more algae will grow on it!
+                            </p>
+                    </div>                </div>
+                <div id=winter-scene class="segment">
+                    <!--TODO rename to type_github -->
+                    <div class="captions">
+                                <p class="caption" id=winter-scene-text 1>
+                                <strong>
+                                    Winter to spring
+                                </strong>
+                                    <br>
+                                All of this data is collected thanks to scientists’ fieldwork, as they sample the water at all points of the year and in any weather!
+                            </p>
+                                <p class="caption" id=winter-scene-text 2>
+                                <strong>
+                                    
+                                </strong>
+                                Compare when the ice broke, and how thick it got each year.
+                    Ice breaks in crystals and almost never gets past a meter thick, but it’s enough to hold a truck!
+                            </p>
+                    </div>                </div>
+                <div>
+                    
+                        <image class="image-block ground-front" id=arctic src=/vizchange-animation/res/browning/evidence/map/arctic.png></image>
+                        <image class="image-block ground-front" id=map src=/vizchange-animation/res/browning/evidence/map/map.png></image>
+                        <image class="image-block ground-front" id=perc-1 src=/vizchange-animation/res/browning/evidence/map/percentage/1.png></image>
+                        <image class="image-block ground-front" id=perc-2 src=/vizchange-animation/res/browning/evidence/map/percentage/2.png></image>
+                        <image class="image-block ground-front" id=perc-3 src=/vizchange-animation/res/browning/evidence/map/percentage/3.png></image>
+                        <image class="image-block ground-front" id=perc-4 src=/vizchange-animation/res/browning/evidence/map/percentage/4.png></image>
+                        <image class="image-block ground-front" id=perc-5 src=/vizchange-animation/res/browning/evidence/map/percentage/5.png></image>
+                </div>
+                <div>
+                    
+                        <image class="image-block ground-front" id=context-1 src=/vizchange-animation/res/browning/evidence/context/1.png></image>
+                        <image class="image-block ground-front" id=context-2 src=/vizchange-animation/res/browning/evidence/context/2.png></image>
+                        <image class="image-block ground-front" id=context-3 src=/vizchange-animation/res/browning/evidence/context/3.png></image>
+                        <image class="image-block ground-front" id=context-4 src=/vizchange-animation/res/browning/evidence/context/4.png></image>
+                        <image class="image-block ground-front" id=context-5 src=/vizchange-animation/res/browning/evidence/context/5.png></image>
+                        <image class="image-block ground-front" id=context-6 src=/vizchange-animation/res/browning/evidence/context/6.png></image>
+                        <image class="image-block ground-front" id=context-7 src=/vizchange-animation/res/browning/evidence/context/7.png></image>
+                        <image class="image-block ground-front" id=context-8 src=/vizchange-animation/res/browning/evidence/context/8.png></image>
+                </div>
+                <div>
+                    
+                        <image class="image-block ground-front" id=summer-axonometric src=/vizchange-animation/res/browning/evidence/summer/axonometric.png></image>
+                        <image class="image-block ground-front" id=freeze src=/vizchange-animation/res/browning/evidence/summer/freeze.png></image>
+                        <image class="image-block ground-front" id=time src=/vizchange-animation/res/browning/evidence/summer/time.png></image>
+                        <image class="image-block ground-front" id=scientist-1 src=/vizchange-animation/res/browning/evidence/summer/scientist/1.png></image>
+                        <image class="image-block ground-front" id=scientist-2 src=/vizchange-animation/res/browning/evidence/summer/scientist/2.png></image>
+                        <image class="image-block ground-front" id=scientist-3 src=/vizchange-animation/res/browning/evidence/summer/scientist/3.png></image>
+                        <image class="image-block ground-front" id=scientist-4 src=/vizchange-animation/res/browning/evidence/summer/scientist/4.png></image>
+                </div>
+                <div>
+                    
+                        <image class="image-block ground-front" id=winter-axonometric src=/vizchange-animation/res/browning/evidence/winter/axonometric.png></image>
+                        <image class="image-block ground-front" id=break src=/vizchange-animation/res/browning/evidence/winter/break.png></image>
+                        <image class="image-block ground-front" id=winter-scientist-1 src=/vizchange-animation/res/browning/evidence/winter/scientist/1.png></image>
+                        <image class="image-block ground-front" id=winter-scientist-2 src=/vizchange-animation/res/browning/evidence/winter/scientist/2.png></image>
+                </div>
+        </div>
+            <div class="segment">
+                <div class="fotnote">
+                    <div class="menu">
+                            <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
+                            <a class="button" href="/vizchange-animation/browning-discovery">Discovery Dive</a>
+                            <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
+                            <a class="button" href="/vizchange-animation/browning-evidencia">Local Evidencia</a>
+                    </div>
+                </div>
+            </div>
+    
+    <div class="bottom"></div>
+    
+    <div class="right-side"></div>
+    
+    <div class="bottom-right"></div>
+    <!--
+    -->	</body>
+</html>

@@ -108,6 +108,20 @@ app.render("browning-github.hbs", {
 	);
 })
 
+app.render("browning-github.hbs", {
+	acts: [browning.acts.evidence],
+	actsID: ['evidence'],
+},  (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("browning-evidence.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})
 
 
 /*
