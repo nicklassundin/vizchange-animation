@@ -32,7 +32,7 @@ app.get("/browning-fishes", (req, res) => {
 		actsID: ['fishes'],
 	})
 })
-app.get("/browning-evidencia", (req, res) => {
+app.get("/browning-evidence", (req, res) => {
 	res.render("browning.hbs", {
 		acts: [browning.acts.evidence],
 		actsID: ['evidence'],
