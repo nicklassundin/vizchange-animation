@@ -1,14 +1,15 @@
 
 const {Phrase} = require("../core/phrase");
 
+
 export class Evidence extends Phrase {
     constructor () {
         super();
         this.createTimeline('map', {
             scrollTrigger:{
                 trigger: `#map-scene`,
-                start: "top top",
-                end: "bottom bot",
+                start: "top top+=1",
+                end: "bottom top",
                 //markers: true,
                 //pin: true,
                 //pinnedContainer: true,
@@ -20,10 +21,10 @@ export class Evidence extends Phrase {
 
             ['#perc-1', '#perc-2', '#perc-3', '#perc-4', '#perc-5'].forEach((each, index) => {
                 this.fadeIn(each, start,'map')
-                if(index < 4)this.fadeOut(each, '>','map')
+                if(index < 4) this.fadeOut(each, '>','map')
                 start = '<'
             })
-            this.fadeOut(['#arctic', '#map', '#perc-1', '#perc-2', '#perc-3', '#perc-4', '#perc-5'], '>', 'map')
+            this.fadeOut(['#arctic', '#map', '#perc-1', '#perc-2', '#perc-3', '#perc-4', '#perc-5'], '>+6', 'map')
         })
 
         this.addBoxAnimation('context', ['#context-1', '#context-2', '#context-3', '#context-4', '#context-5', '#context-6', '#context-7', '#context-8'], 'right')

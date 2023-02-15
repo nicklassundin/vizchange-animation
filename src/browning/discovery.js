@@ -29,7 +29,7 @@ export class Discovery {
         dive.addVertical('>');
         dive.addVertical('>');
 
-        dive.fadeOut('>');
+        //dive.fadeOut('>');
 
 
     }
