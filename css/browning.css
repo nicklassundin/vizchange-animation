@@ -78,6 +78,7 @@ html, body, body * {
 	position: relative;
 }
 .header, .fotnote {
+	overflow: hidden;
 	top: 50vh;
 	width: calc(980px);
 	max-width: 100vw;
