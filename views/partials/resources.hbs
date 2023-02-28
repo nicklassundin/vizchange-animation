@@ -1,7 +1,10 @@
 
 {{#each files}}
-    <!--
-        <image class="image-block {{this.level}}" id={{this.id}} src={{this.file}}></image>
-    -->
-    <image class="image-block {{this.level}}" style="z-index: {{this.level}}" id={{this.id}} src={{this.file}}></image>
+    {{#if this.plot includeZero=true}}
+        <div id="{{this.id}}" class="plot">
+            <div class="{{this.class}}">{{this.station}}</div>
+        </div>
+    {{else}}
+        <image class="image-block {{this.level}}" style="z-index: {{this.level}}" id={{this.id}} src={{this.file}}></image>
+    {{/if}}
 {{/each}}

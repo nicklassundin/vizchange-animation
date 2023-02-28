@@ -12,6 +12,9 @@
 	--right-side-bottom: calc(100 * var(--vh) - var(--max-height));
 	--margin-border-height: calc(0.2 * var(--vh));
 	--margin-border-width: calc(0.2 * var(--vw));
+	/* TODO use */
+	--top-margin: 0;
+	--bottom-margin-not-zero: calc(max(var(--max-height), -1 * var(--max-height)) / 2 + var(--max-height)/2);
 }
 
 
@@ -28,10 +31,12 @@ body {
 	background-color: #508ef2;
 }
 
+html, body {
+	overflow-x: hidden;
+}
 html, body, body * {
 	padding: 0 0 0;
 	margin: 0;
-	overflow-x: hidden;
 }
 
 .window {
@@ -152,13 +157,6 @@ html, body, body * {
 	max-height: var(--max-height);
 	width: auto;
 	top: 0!important;
-	/*
-
-	left: 0!important;
-	padding: 0!important;
-	margin: 0!important;
-	object-position: 0% top!important;
-	 */
 	object-fit: cover!important;
 	pointer-events: none;
 }

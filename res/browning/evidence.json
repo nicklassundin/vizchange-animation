@@ -184,6 +184,16 @@
       "id": "winter-scientist-2",
       "level": "ground-front",
       "file": "/res/browning/evidence/winter/scientist/2.png"
+    },{
+      "plot": true,
+      "id": "lakeBreakPlot",
+      "class": "viz-lake-break",
+      "station": "abisko"
+    },{
+      "plot": true,
+      "id": "lakeIcePlot",
+      "class": "viz-lake-thick",
+      "station": "abisko"
     }]
   }]
 }

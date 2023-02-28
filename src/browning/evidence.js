@@ -29,7 +29,7 @@ export class Evidence extends Phrase {
 
         this.addBoxAnimation('context', ['#context-1', '#context-2', '#context-3', '#context-4', '#context-5', '#context-6', '#context-7', '#context-8'], 'right')
         this.addBoxAnimation('summer', ['#summer-axonometric', '#freeze', '#time', '#scientist-1', '#scientist-2', '#scientist-3', '#scientist-4'], 'left')
-        this.addBoxAnimation('winter', ['#winter-axonometric', '#break', '#winter-scientist-1', '#winter-scientist-2'], 'up')
+        this.addBoxAnimation('winter', ['#winter-axonometric', '#break', '#winter-scientist-1', '#winter-scientist-2', '#lakeIcePlot', "#lakeBreakPlot"], 'up')
 
     }
     addBoxAnimation (id, element, direction) {

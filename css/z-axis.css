@@ -7,6 +7,10 @@
 .ground-front {
      z-index: 3001;
  }
+.plots, .plots * {
+    z-index: 3500;
+}
+
 .detail-back {
     z-index: 1999;
 }

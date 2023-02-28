@@ -12,6 +12,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/MotionPathPlugin.min.js"></script>
+        <!-- plot script -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://acp.k8s.glimworks.se/client/bundle.js"></script></script>
     </head>	<body>
     <script type="text/javascript">
     
@@ -93,7 +96,8 @@
                 ScrollTrigger.refresh()
             })
         })("discovery")
-    </script>        <div class="content" id=discovery>
+    </script>
+        <div class="content" id=discovery>
                 <div id=intro class="segment">
                     <!--TODO rename to type_github -->
                     <div class="captions">
@@ -246,4 +250,25 @@
     <div class="bottom-left"></div>
     <!--
     -->	</body>
-</html>
+    <script>
+        let trig = function(){
+            document.querySelectorAll('.plot').forEach(div => {
+                div = div.children[0];
+                console.log(div)
+                let s = div.innerHTML
+                div.innerHTML = "";
+                //div.setAttribute("id","mark");
+                let test = "https://acp.k8s.glimworks.se";
+                //var test = "https://staging-devop-deploy-abisko-climate.k8s.glimworks.se";
+                let tmp = new URL(location.href+s);
+                nav_lang = 'en';
+                console.log(div.getAttribute("class"))
+                lib.renderSets(div,
+                        div.getAttribute("class"),
+                        s,
+                        test);
+            })
+    
+        }
+        window.onload = trig();
+    </script></html>
