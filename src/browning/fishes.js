@@ -17,7 +17,11 @@ export class Fishes extends Phrase{
                 //   snap: snap
             }
         })
+        /*
         this.fade(this.getText('#fishes-outro'), 0, 4, 'fishes-outro')
+
+         */
+
 
         this.createTimeline('char')
         this.createTimeline('barbel')
@@ -72,7 +76,12 @@ export class Fishes extends Phrase{
             },
             duration: duration,
         }, '>')
+
+
+        /*
         this.fadeText('<', duration, fish)
+
+         */
 
         this.timelines[fish].to(`#${fish}`, {
 

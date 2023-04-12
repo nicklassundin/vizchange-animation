@@ -73,13 +73,18 @@ export class Phrase {
     }
     fadeText() {
         this.ids.text.map((each, i) => {
+            /* TODO to fade or not to fade so browning/fishes.js aswell
             this.timeline.from(each, {opacity: 0, duration: 1}, '>')
             this.timeline.to(each, {opacity: 0, duration: 1}, '>')
+
+             */
         })
     }
     addHorizontal (infactor, outfactor) {
         this.addHorizontalIn(infactor)
+        /*
         this.fadeText();
+         */
         this.addHorizontalOut(outfactor)
     }
     addHorizontalOut (factor = 1) {
@@ -157,6 +162,7 @@ export class verticalAnimation {
         this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.foreground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.detail, {x: `-${value/2*this.times}%`, duration: 1}, '<')
+
         this.timeline.to(this.ids.popup[0], {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 1}, '<')
         this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 1}, '<')

@@ -1,73 +1,86 @@
 
-.right-side, .bottom, .left-side {
-    background-color: #eeeeee;
+
+.margin {
     background: #ffffff;
     border-style: solid;
     border-color: #111111;
+    position: fixed;
+    z-index: 30000;
+}
+
+
+.corner {
+    border-width: 0;
+    z-index: 30010!important;
 }
 
 .bottom {
     border-width: 0.2vh 0 0 0;
-    position: fixed;
     width: calc(960px);
-    max-width: 960px;
-    height: calc(100 * var(--vh) - var(--max-height));
-    min-height: calc(100 * var(--vh) - var(--max-height));
+    height: calc(100 * var(--vh) - var(--max-height) - var(--margin-top-height));
+    min-height: calc(100 * var(--vh) - var(--max-height) - var(--margin-top-height));
     bottom: 0;
-    left: calc(var(--left-margin) + 3vw);
-    z-index: 30000;
+    left: calc(var(--left-margin) + 3 * var(--vw));
 }
 
 .right-side {
     border-width: 0 0 0 0.2vw;
     background-blend-mode: darken, luminosity;
-    position: fixed;
     width: 100%;
     height: 100vw;
     max-height: calc(100% - (100% - var(--max-height)));
-    background: #eeeeee;
-    background: #ffffff;
-    z-index: 30001;
     bottom: var(--right-side-bottom);
     left: calc(960px + calc(var(--left-margin) - 3vw));
+    top: var(--margin-top-height);
 }
 .bottom-right {
-    border-style: solid;
-    border-width: var(--margin-border-height) var(--margin-border-width);
     border-color: #eeeeee;
-    background: #eeeeee;
-    background: #ffffff;
-    position: fixed;
     width: 100%;
-    height: calc(100% - var(--max-height));
-    z-index: 29000;
+    height: calc(100% - var(--max-height) - var(--margin-top-height));
     bottom: 0;
     left: calc(960px + calc(var(--left-margin) - 3 * var(--vw)));
 }
 
 .left-side {
-    border-width: 0 var(--margin-border-width) 0 0;
+    border-width: 0 0.2vw 0 0;
     background-blend-mode: darken, luminosity;
-    position: fixed;
     width: calc(var(--left-margin) + 3 * var(--vw));
     height: 100vw;
     max-height: calc(100vh - (100vh - var(--max-height)));
-    background: #eeeeee;
-    background: #ffffff;
-    z-index: 30001;
     bottom: calc(100* var(--vh) - var(--max-height));
     left: 0;
+    top: var(--margin-top-height);
 }
 .bottom-left {
-    border-style: solid;
-    border-width: var(--margin-border-height) var(--margin-border-width);
-    border-color: #eeeeee;
-    background: #eeeeee;
-    background: #ffffff;
-    position: fixed;
-    width: calc(var(--left-margin) + 3vw);
-    height: calc(100 * var(--vh) - var(--max-height));
-    z-index: 29000;
+    width: calc(var(--left-margin) + 3 * var(--vw));
+    height: calc(100 * var(--vh) - var(--max-height) - var(--margin-top-height));
     bottom: 0;
     left: 0;
 }
+.top-right {
+    top: 0;
+    left: calc(960px + calc(var(--left-margin) - 3 * var(--vw)));
+    height: var(--margin-top-height);
+    width: 100%;
+}
+.top-left {
+    height: var(--margin-top-height);
+    width: calc(var(--left-margin-not-zero) + 3 * var(--vw));
+    top: 0;
+}
+.top {
+    border-width: 0 0 0.2vw 0;
+    height: var(--margin-top-height);
+    width: calc(960px - 6 * var(--vw));
+    max-width: calc(100 * var(--vw));
+    top: 0;
+    left: calc(var(--left-margin-not-zero) + 3 * var(--vw));
+}
+
+/*
+.top:active {
+    height: 540px;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+ */

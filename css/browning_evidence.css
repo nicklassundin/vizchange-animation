@@ -7,7 +7,7 @@ body {
     height: 100vh!important;
     max-height: var(--max-height);
     width: 960px;
-    top: 0!important;
+    top: var(--margin-top-height)!important;
     object-fit: cover!important;
     z-index: 3500;
 
@@ -43,6 +43,7 @@ body {
 .viz-lake-thick:hover {
     transform: scale(.9) translate(-20%, -20%);
 }
+
 .viz-lake-thick:hover .highcharts-background {
     opacity: .9;
 }
