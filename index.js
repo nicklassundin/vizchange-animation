@@ -142,3 +142,24 @@ app.render(
 );
 
  */
+
+app.get("/browning-menu", (req, res) => {
+	res.render("browning.hbs", {
+		acts: [browning.acts.menu],
+		actsID: ['menu'],
+	})
+})
+app.render("browning-github.hbs", {
+	acts: [browning.acts.menu],
+	actsID: ['menu'],
+},  (err, str) => {
+	if (err) {
+		throw err;
+	}
+	fs.writeFile("browning-menu.html", str, (err) => {
+			if (err) {
+				console.error(err);
+			}
+		}
+	);
+})

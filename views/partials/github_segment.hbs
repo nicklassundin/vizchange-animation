@@ -1,14 +1,18 @@
 <!--TODO rename to type_github -->
-{{#if title includeZero=true}}
-    <div class="header">
+<div class="header">
+    {{#if title includeZero=true}}
         <h1 class="title">{{title}}</h1>
-        <div class="menu">
-            {{#each menu}}
+    {{/if}}
+    <div class="menu">
+        {{#each menu}}
+            {{#if this.class}}
+                <a class="button {{this.class}}" href="/vizchange-animation{{this.href}}">{{this.text}}</a>
+            {{else}}
                 <a class="button" href="/vizchange-animation{{this.href}}">{{this.text}}</a>
-            {{/each}}
-        </div>
+            {{/if}}
+        {{/each}}
     </div>
-{{/if}}
+</div>
 <div class="captions">
     {{#each text}}
         {{#if text includeZero=true}}

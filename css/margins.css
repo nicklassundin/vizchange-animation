@@ -30,7 +30,7 @@
     height: 100vw;
     max-height: calc(100% - (100% - var(--max-height)));
     bottom: var(--right-side-bottom);
-    left: calc(960px + calc(var(--left-margin) - 3vw));
+    left: calc(960px + calc(var(--left-margin) - 3 * var(--vw)));
     top: var(--margin-top-height);
 }
 .bottom-right {

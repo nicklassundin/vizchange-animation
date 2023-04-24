@@ -1,0 +1,9 @@
+
+.titleButton {
+    pointer-events: auto;
+}
+
+.textButton {
+    white-space: normal;
+    width: 30px;
+}

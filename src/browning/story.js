@@ -12,8 +12,10 @@ export const {Fishes} = require('./fishes');
 
 export const {Evidence} = require('./evidence');
 
+export const {Menu} = require('./menu');
 window.Imersive = Imersive;
 window.Discovery = Discovery;
 window.Fishes = Fishes;
 window.Evidence = Evidence;
+window.Menu = Menu;
 
