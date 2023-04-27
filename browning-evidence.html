@@ -3,6 +3,7 @@
     
     <head>
         <link rel="stylesheet" type="text/css" href="css/browning.css">
+        <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/z-axis.css">
         <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
         <link rel="stylesheet" type="text/css" href="css/margins.css">
@@ -108,10 +109,6 @@
         <div class="content" id=evidence>
                 <div id=map-scene class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-left" id=map-scene-text 1>
                                 <strong>
@@ -123,10 +120,6 @@
                     </div>                </div>
                 <div id=context-scene class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-left" id=context-scene-text 1>
                                 <strong>
@@ -150,10 +143,6 @@
                     </div>                </div>
                 <div id=summer-scene class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-right" id=summer-scene-text 1>
                                 <strong>
@@ -172,10 +161,6 @@
                     </div>                </div>
                 <div id=winter-scene class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-right" id=winter-scene-text 1>
                                 <strong>
@@ -192,7 +177,7 @@
                     Ice breaks in crystals and almost never gets past a meter thick, but it’s enough to hold a truck!
                             </p>
                     </div>                </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block ground-front" id=arctic src=/vizchange-animation/res/browning/evidence/map/arctic.png></image>
                             <image class="image-block ground-front" id=map src=/vizchange-animation/res/browning/evidence/map/map.png></image>
@@ -202,7 +187,7 @@
                             <image class="image-block ground-front" id=perc-4 src=/vizchange-animation/res/browning/evidence/map/percentage/4.png></image>
                             <image class="image-block ground-front" id=perc-5 src=/vizchange-animation/res/browning/evidence/map/percentage/5.png></image>
                 </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block ground-front" id=context-1 src=/vizchange-animation/res/browning/evidence/context/1.png></image>
                             <image class="image-block ground-front" id=context-2 src=/vizchange-animation/res/browning/evidence/context/2.png></image>
@@ -213,7 +198,7 @@
                             <image class="image-block ground-front" id=context-7 src=/vizchange-animation/res/browning/evidence/context/7.png></image>
                             <image class="image-block ground-front" id=context-8 src=/vizchange-animation/res/browning/evidence/context/8.png></image>
                 </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block ground-front" id=summer-axonometric src=/vizchange-animation/res/browning/evidence/summer/axonometric.png></image>
                             <image class="image-block ground-front" id=freeze src=/vizchange-animation/res/browning/evidence/summer/freeze.png></image>
@@ -223,7 +208,7 @@
                             <image class="image-block ground-front" id=scientist-3 src=/vizchange-animation/res/browning/evidence/summer/scientist/3.png></image>
                             <image class="image-block ground-front" id=scientist-4 src=/vizchange-animation/res/browning/evidence/summer/scientist/4.png></image>
                 </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block ground-front" id=winter-axonometric src=/vizchange-animation/res/browning/evidence/winter/axonometric.png></image>
                             <image class="image-block ground-front" id=break src=/vizchange-animation/res/browning/evidence/winter/break.png></image>
@@ -241,6 +226,7 @@
                 <div class="segment">
                     <div class="fotnote">
                         <div class="menu">
+                                <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
                                 <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
                                 <a class="button" href="/vizchange-animation/browning-discovery">Discovery Dive</a>
                                 <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>

@@ -3,6 +3,9 @@
   "next": {
     "id": "next",
     "redirect": [{
+      "text": "Intro",
+      "href": "/browning-menu"
+    },{
       "text": "Immersion",
       "href": "/browning-imersive"
     },{

@@ -3,6 +3,7 @@
     
     <head>
         <link rel="stylesheet" type="text/css" href="css/browning.css">
+        <link rel="stylesheet" type="text/css" href="css/menu.css">
         <link rel="stylesheet" type="text/css" href="css/z-axis.css">
         <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
         <link rel="stylesheet" type="text/css" href="css/margins.css">
@@ -108,31 +109,24 @@
         <div class="content" id=discovery>
                 <div id=intro class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                     </div>                </div>
                 <div id=dive-intro class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                            <h1 class="title">Browning</h1>
-                        <div class="menu">
-                                    <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
-                                    <a class="button" href="/vizchange-animation#dive-intro">Discovery Dive</a>
-                                    <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
-                                    <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
+                        <div class="header">
+                                <h1 class="title">Browning</h1>
+                            <div class="menu">
+                                        <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
+                                        <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
+                                        <a class="button" href="/vizchange-animation/browning-discovery">Discovery Dive</a>
+                                        <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
+                                        <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
+                            </div>
                         </div>
-                    </div>
                     <div class="captions">
                     </div>                </div>
                 <div id=dive-yesterday class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-left" id=dive-yesterday-text 1>
                                 <strong>
@@ -162,10 +156,6 @@
                     </div>                </div>
                 <div id=dive-today class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-left" id=dive-today-text 1>
                                 <strong>
@@ -189,10 +179,6 @@
                     </div>                </div>
                 <div id=dive-tomorrow class="segment">
                     <!--TODO rename to type_github -->
-                    <div class="header">
-                        <div class="menu">
-                        </div>
-                    </div>
                     <div class="captions">
                                 <p class="caption-left" id=dive-tomorrow-text 1>
                                 <strong>
@@ -217,13 +203,13 @@
                                 Have you heard of lapplandsmästerskapet? It’s an ice fishing competition here on Torneträsk that brings together people from all over Scandinavia, each aiming to catch the biggest fish. It used to be held each May, but due to the changing ice cover of the lake, it must now take place in April: lakes are clearly changing.
                             </p>
                     </div>                </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block background-back" id=D1 src=/vizchange-animation/res/browning/discovery/background_far.png></image>
                             <image class="image-block background" id=D2 src=/vizchange-animation/res/browning/imersion/d/2d-background.png></image>
                             <image class="image-block ground" id=D3 src=/vizchange-animation/res/browning/imersion/d/3d-water.png></image>
                 </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block ground-front" id=bubbles src=/vizchange-animation/res/browning/discovery/popup1/bubbles.png></image>
                             <image class="image-block ground-front" id=carbon src=/vizchange-animation/res/browning/discovery/popup1/carbon_cycle.png></image>
@@ -240,7 +226,7 @@
                             <image class="image-block ground-front" id=nutri2 src=/vizchange-animation/res/browning/discovery/popup3/nutrients_3.png></image>
                             <image class="image-block ground-front" id=ice src=/vizchange-animation/res/browning/discovery/popup3/ice_close.png></image>
                 </div>
-                <div>
+                <div class="image-container">
                     
                             <image class="image-block background-front" id=bg2 src=/vizchange-animation/res/browning/discovery/background_close.png></image>
                             <image class="image-block ground" id=fg1 src=/vizchange-animation/res/browning/discovery/foreground_1.png></image>
@@ -253,6 +239,7 @@
                 <div class="segment">
                     <div class="fotnote">
                         <div class="menu">
+                                <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
                                 <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
                                 <a class="button" href="/vizchange-animation#dive-intro">Discovery Dive</a>
                                 <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
