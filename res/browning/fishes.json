@@ -78,14 +78,14 @@
   "next": {
     "id": "next",
     "redirect": [{
+      "text": "Intro",
+      "href": "/browning-menu"
+    },{
       "text": "Immersion",
       "href": "/browning-imersive"
     },{
       "text": "Discovery Dive",
       "href": "/browning-discovery"
-    },{
-      "text": "Fish Stories",
-      "href": "/browning-fishes"
     },{
       "text": "Local Evidencia",
       "href": "/browning-evidence"

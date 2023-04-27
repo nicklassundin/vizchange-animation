@@ -56,6 +56,9 @@
   "next": {
     "id": "next",
     "redirect": [{
+      "text": "Intro",
+      "href": "/browning-menu"
+    },{
       "text": "Immersion",
       "href": "/browning-imersive"
     },{
@@ -64,9 +67,6 @@
     },{
       "text": "Fish Stories",
       "href": "/browning-fishes"
-    },{
-      "text": "Local Evidencia",
-      "href": "/browning-evidence"
     }]
   },
   "resources": [{

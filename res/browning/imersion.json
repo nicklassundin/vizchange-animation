@@ -4,6 +4,9 @@
     "id": "titlescreen",
     "title": "Browning",
     "menu": [{
+      "text": "Intro",
+      "href": "/browning-menu"
+    },{
       "text": "Immersion",
       "href": "#high"
     },{
@@ -43,8 +46,8 @@
   "next": {
     "id": "next",
     "redirect": [{
-      "text": "Immersion",
-      "href": "#high"
+      "text": "Intro",
+      "href": "/browning-menu"
     },{
       "text": "Discovery Dive",
       "href": "/browning-discovery"

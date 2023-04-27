@@ -7,11 +7,11 @@
     "id": "dive-intro",
     "title": "Browning",
     "menu": [{
+      "text": "Intro",
+      "href": "/browning-menu"
+    },{
       "text": "Immersion",
       "href": "/browning-imersive"
-    },{
-      "text": "Discovery Dive",
-      "href": "#dive-intro"
     },{
       "text": "Fish Stories",
       "href": "/browning-fishes"
