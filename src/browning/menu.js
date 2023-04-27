@@ -37,11 +37,13 @@ export class Menu extends Phrase {
             getTimelines().time.reversed(false)
             switch (getTimelines().time.previousLabel()) {
                 case 'yesterday':
-                    getTimelines().menu.play(getTimelines().menu.nextLabel())
+                    setCurrent(getTimelines().menu.nextLabel());
+                    getTimelines().menu.play(getCurrent())
                     getTimelines().time.play('today')
                     break;
                 case 'today':
-                    getTimelines().menu.play(getTimelines().menu.nextLabel())
+                    setCurrent(getTimelines().menu.nextLabel());
+                    getTimelines().menu.play(getCurrent())
                     getTimelines().time.play('tomorrow')
                     break;
                 default:
@@ -55,10 +57,12 @@ export class Menu extends Phrase {
                 case 'yesterday':
                     break;
                 case 'tomorrow':
+                    setCurrent(getCurrent().replace('tomorrow', 'today'))
                     getTimelines().menu.play(`${getCurrent()}`)
                     getTimelines().time.resume()
                     break;
                 case 'today':
+                    setCurrent(getCurrent().replace('today', 'yesterday'))
                     getTimelines().menu.play(`${getCurrent()}`)
                     getTimelines().time.resume()
                     break;
@@ -67,31 +71,30 @@ export class Menu extends Phrase {
         })
         $(".springButton").on("click", function(e){
             if(isActive()) return false
-            console.log('Spring')
-            setCurrent(`Spring_${getTimelines().time.previousLabel()}`)
             e.preventDefault();
+            setCurrent(`Spring_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
         $(".summerButton").on("click", function(e){
             if(isActive()) return false
-            setCurrent(`Summer_${getTimelines().time.previousLabel()}`)
             e.preventDefault();
+            setCurrent(`Summer_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
+
         })
         $(".autumnButton").on("click", function(e){
             if(isActive()) return false
-            setCurrent(`Autumn_${getTimelines().time.previousLabel()}`)
             e.preventDefault();
+            setCurrent(`Autumn_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
         $(".winterButton").on("click", function(e){
             if(isActive()) return false
-            console.log(`Winter_${getTimelines().time.previousLabel()}`)
-            setCurrent(`Winter_${getTimelines().time.previousLabel()}`)
             e.preventDefault();
+            setCurrent(`Winter_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
-        console.log(this.timelines.menu.labels)
+
     }
     'createTimeTimeline' () {
         let today = ['.lake_today']

@@ -3,7 +3,33 @@
     pointer-events: auto;
 }
 
+.fotnote {
+    top: calc(var(--margin-top-height) + 540px);
+    z-index: 300000!important;
+    position: fixed!important;
+}
+
 .textButton {
     white-space: normal;
     width: 30px;
+}
+
+@keyframes clouds {
+    from {
+        transform: rotate(-10deg);;
+    }
+    to {
+        transform: rotate(10deg);
+    }
+
+}
+
+/* The element to apply the animation to */
+.cloud {
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 90%;
+    animation-name: clouds;
+    animation-duration: 12s;
 }

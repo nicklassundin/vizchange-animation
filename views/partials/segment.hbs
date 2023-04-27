@@ -1,19 +1,21 @@
-
-<div class="header">
-    {{#if title includeZero=true}}
-        <h1 class="title">{{title}}</h1>
-    {{/if}}
-    <div class="menu">
-        {{#each menu}}
-            {{#if this.class}}
-                <a class="button {{this.class}}" href="{{this.href}}">{{this.text}}</a>
-            {{else}}
-                <a class="button" href="{{this.href}}">{{this.text}}</a>
-            {{/if}}
-        {{/each}}
+{{#if menu includeZero=true}}
+    <div class="header">
+        {{#if title includeZero=true}}
+            <h1 class="title">{{title}}</h1>
+        {{/if}}
+        <div class="menu">
+            {{#each menu}}
+                {{#if this.class}}
+                    <a class="button {{this.class}}" href="{{this.href}}">{{this.text}}</a>
+                {{else}}
+                    <a class="button" href="{{this.href}}">{{this.text}}</a>
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
-</div>
-    <div class="captions">
+{{/if}}
+
+<div class="captions">
     {{#each text}}
         {{#if text includeZero=true}}
             {{#if this.class includeZero=true}}

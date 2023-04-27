@@ -3,6 +3,7 @@ body {
 }
 
 .plot {
+    left: var(--left-margin);
     position: fixed!important;
     height: 100vh!important;
     max-height: var(--max-height);
