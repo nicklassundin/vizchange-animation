@@ -20,10 +20,11 @@ body {
     left: calc((var(--left-margin-not-zero) + 960px) * 0.2753);
     transform-origin: top left;
     transform: skew(-60deg,30deg) scale(.273);
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    transition: left 2s, width 2s, height 2s, background-color 2s, transform 2s;
 }
 .viz-lake-break:hover {
-    transform: scale(.9) translate(calc(-1 * 960px / 2), 0);
+    left: -100px;
+    transform: scale(.9);
 }
 .viz-lake-break:hover .highcharts-background {
     opacity: .9;
