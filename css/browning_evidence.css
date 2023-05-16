@@ -3,48 +3,51 @@ body {
 }
 
 .plot {
+    pointer-events: none;
     left: var(--left-margin);
     position: fixed!important;
-    height: 100vh!important;
-    max-height: var(--max-height);
-    width: 960px;
     top: var(--margin-top-height)!important;
     object-fit: cover!important;
     z-index: 3500;
-
 }
 
 .viz-lake-break {
+    pointer-events: all;
     position: relative;
-
     width: 960px;
     height: 540px;
-
     top: 111px;
     left: calc((var(--left-margin-not-zero) + 960px) * 0.2753);
-
     transform-origin: top left;
     transform: skew(-60deg,30deg) scale(.273);
     transition: width 2s, height 2s, background-color 2s, transform 2s;
-
 }
-.viz-lake-thick {
-    position: relative;
+.viz-lake-break:hover {
+    transform: scale(.9) translate(calc(-1 * 960px / 2), 0);
+}
+.viz-lake-break:hover .highcharts-background {
+    opacity: .9;
+}
+/* plot class that has a hover .viz-lake-break that is hovered, that other .plot will be hidden */
+.plot:has(.viz-lake-break:hover) + .plot {
+    display: none;
+}
 
+.viz-lake-thick {
+    pointer-events: all;
+    position: relative;
     width: 960px;
     height: 540px;
-
     top: 222px;
     left: calc((var(--left-margin-not-zero) + 960px) * 0.08);
-
     transform-origin: top left;
     transform: skew(0, 30deg) scale(.273);
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
+
 .viz-lake-thick:hover {
     transform: scale(.9) translate(-20%, -20%);
 }
-
 .viz-lake-thick:hover .highcharts-background {
     opacity: .9;
 }

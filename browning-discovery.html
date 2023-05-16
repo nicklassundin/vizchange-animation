@@ -255,8 +255,7 @@
             <br>
             <p>
                 <p>Developer</p>
-                <a href="https://github.com/nicklassundin">Nicklas</a>
-    
+                <a href="https://github.com/nicklassundin">Nicklas Sundin Johansson</a>
             </p>
         </div>
     </div>
@@ -282,10 +281,20 @@
                 let tmp = new URL(location.href+s);
                 nav_lang = 'en';
                 //console.log(div.getAttribute("class"))
-                lib.renderSets(div,
+    
+                let config = {
+                    set:div.getAttribute("class"),
+                    station: s,
+                    hostUrl: "https://acp.k8s.glimworks.se"
+                }
+    
+                lib.render(div, config)
+                /*
                         div.getAttribute("class"),
                         s,
                         test);
+    
+                 */
             })
     
         }
