@@ -32,7 +32,7 @@
     padding: 10px;
 }
 .caption-left  {
-    margin-left: calc(var(--left-margin) * 0.5);
+    margin-left: calc(var(--left-margin) * 0.9);
     width: 50%;
     max-width: calc(980px / 2);
     float: left;
@@ -55,7 +55,7 @@
 }
  */
 
-p{
+.segment p{
 
     font-size: 1em;
     /*
@@ -76,7 +76,7 @@ p{
 }
 
 /* Speach bouble Quote */
-p:before{
+.segment p:before{
    /*
     content: "\201C"; /*Unicode for Left Double Quote*/
     /*Font*/
@@ -104,3 +104,4 @@ p:after{
 }
 
  */
+

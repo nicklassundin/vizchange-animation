@@ -7,7 +7,7 @@
 	--main-bg-color: example;
 	--min-height: 50%;
 	--max-height: calc(min(100 * var(--vh), 540px));
-	--left-margin: calc((100% - 980px) / 2);
+	--left-margin: calc(((100 * var(--vw)) - 980px) / 2);
 	--left-margin-not-zero: calc(max(var(--left-margin), -1 * var(--left-margin)) / 2 + var(--left-margin)/2);
 	--right-side-bottom: calc(100 * var(--vh) - var(--max-height));
 	--margin-border-height: calc(0.2 * var(--vh));

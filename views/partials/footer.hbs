@@ -2,7 +2,7 @@
     let trig = function(){
         document.querySelectorAll('.plot').forEach(div => {
             div = div.children[0];
-            console.log(div)
+            //console.log(div)
             let s = div.innerHTML
             div.innerHTML = "";
             //div.setAttribute("id","mark");
@@ -10,7 +10,7 @@
             //var test = "https://staging-devop-deploy-abisko-climate.k8s.glimworks.se";
             let tmp = new URL(location.href+s);
             nav_lang = 'en';
-            console.log(div.getAttribute("class"))
+            //console.log(div.getAttribute("class"))
             lib.renderSets(div,
                     div.getAttribute("class"),
                     s,

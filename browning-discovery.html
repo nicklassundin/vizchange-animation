@@ -246,7 +246,20 @@
                 </div>
             </div>
     
-    <div class="bottom margin"></div>
+    <div class="bottom margin">
+        <div class="credits">
+            <p>
+                <p>Artist and Artistic Director</p>
+                <a href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-bocquet-2801a1187/">Hélène Bocquet</a>
+            </p>
+            <br>
+            <p>
+                <p>Developer</p>
+                <a href="https://github.com/nicklassundin">Nicklas</a>
+    
+            </p>
+        </div>
+    </div>
     <div class="right-side margin"></div>
     <div class="bottom-right margin corner"></div>
     <div class="left-side margin"></div>
@@ -260,7 +273,7 @@
         let trig = function(){
             document.querySelectorAll('.plot').forEach(div => {
                 div = div.children[0];
-                console.log(div)
+                //console.log(div)
                 let s = div.innerHTML
                 div.innerHTML = "";
                 //div.setAttribute("id","mark");
@@ -268,7 +281,7 @@
                 //var test = "https://staging-devop-deploy-abisko-climate.k8s.glimworks.se";
                 let tmp = new URL(location.href+s);
                 nav_lang = 'en';
-                console.log(div.getAttribute("class"))
+                //console.log(div.getAttribute("class"))
                 lib.renderSets(div,
                         div.getAttribute("class"),
                         s,

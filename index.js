@@ -57,7 +57,7 @@ app.use('/res/:path/:scen/*', function(req,res){
 		});
 	}else{
 		fs.readdir(`${params}`, (err, files) => {
-			console.log(files)
+			//console.log(files)
 			res.send({files})
 		});
 	}
