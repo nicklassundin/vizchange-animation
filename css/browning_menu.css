@@ -4,7 +4,7 @@
 }
 
 .fotnote {
-    top: calc(var(--margin-top-height) + 540px);
+    top: calc(var(--margin-top-height) + var(--max-height));
     z-index: 300000!important;
     position: fixed!important;
 }

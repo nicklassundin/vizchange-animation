@@ -6,8 +6,16 @@
 	--vw: var(--vw-store, 1vw);
 	--main-bg-color: example;
 	--min-height: 50%;
-	--max-height: calc(min(100 * var(--vh), 540px));
-	--left-margin: calc(((100 * var(--vw)) - 980px) / 2);
+	--ratio: 980/560;
+	--ratio-rev: 560/980;
+	--max-height: calc(min(75 * var(--vh), 560px));
+	--max-height-ratio: calc(540px / var(--max-width));
+	--max-height-adjusted: calc(min(75 * var(--vh), min(560px, var(--max-width) * var(--ratio-rev))));
+
+	--max-width: calc(min(100 * var(--vw), 980px));
+	--max-width-ratio: calc(980px / var(--max-height));
+	--max-width-adjusted: calc(min(100 * var(--vw), min(980px, var(--max-height) * var(--ratio))));
+	--left-margin: calc(((100 * var(--vw)) - var(--max-width-adjusted)) / 2);
 	--left-margin-not-zero: calc(max(var(--left-margin), -1 * var(--left-margin)) / 2 + var(--left-margin)/2);
 	--right-side-bottom: calc(100 * var(--vh) - var(--max-height));
 	--margin-border-height: calc(0.2 * var(--vh));
@@ -53,10 +61,12 @@ html, body, body * {
 }
 
 .content {
-	width: calc(100 * var(--vw));
-	max-width: calc(100 * var(--vw));
+	aspect-ratio: 980 / 560;
+	max-height: var(--max-height);
+	max-width: var(--max-width);
 	position: relative;
 	margin: 0;
+	left: var(--left-margin);
 	/*
 	left: var(--left-margin-not-zero);
 
@@ -74,9 +84,10 @@ html, body, body * {
 	background: transparent;
 	/*opacity: 0!important;
      */
+	aspect-ratio: 980 / 560;
+	max-height: calc(0.5 * var(--max-height));
+	max-width: calc(0.5 * var(--max-width));
 	position: fixed!important;
-	max-height: 100%!important;
-	width: auto!important;
 	left: 0!important;
 	top: 0!important;
 	/*object-position: 0% top!important;
@@ -106,9 +117,9 @@ html, body, body * {
 	border-bottom: 5px solid blue;
 	 */
 	position: fixed!important;
-	height: 100vh!important;
+	aspect-ratio: 980 / 560;
 	max-height: var(--max-height);
-	width: auto;
+	max-width: var(--max-width);
 	top: var(--margin-top-height)!important;
 	object-fit: cover!important;
 	pointer-events: none;

@@ -32,7 +32,7 @@
     padding: 10px;
 }
 .caption-left  {
-    margin-left: calc(var(--left-margin) * 0.9);
+    margin-left: calc(var(--left-margin-not-zero) * 0.9);
     width: 50%;
     max-width: calc(980px / 2);
     float: left;

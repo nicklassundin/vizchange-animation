@@ -52,13 +52,16 @@ export class Fishes extends Phrase{
         let duration = 8;
         const path = [
             { x: '50%', y: '0%' },
-            { x: '10%', y: '1%' },
-            { x: '1%', y: '1%' },
-
-            { x: '-1%', y: '1%' },
-            { x: '-1%', y: '-1%' },
-            { x: '1%', y: '-1%' },
-
+            { x: '45%', y: '10%' },
+            { x: '40%', y: '0%' },
+            { x: '35%', y: '-8%'},
+            { x: '30%', y: '0%' },
+            { x: '25%', y: '6%' },
+            { x: '20%', y: '0%' },
+            { x: '15%', y: '-4%'},
+            { x: '10%', y: '0%' },
+            { x: '5%', y: '2%' },
+            { x: '0%', y: '0%' }
         ]
         this.timelines[fish].fromTo(`#${fish}`, {
             x: '100%',
@@ -71,6 +74,7 @@ export class Fishes extends Phrase{
             motionPath: {
                 path: path,
                 alignOrigin: [0.5, 0.5],
+                end: 0.90,
                 //autoRotate: true,
                 //start: 0.25,
             },
