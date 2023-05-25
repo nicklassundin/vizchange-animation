@@ -1,13 +1,5 @@
 
 
-.segment {
-    /* TODO set to 2500 between */
-    z-index: 5000!important;
-    height: calc(100 * var(--vh));
-    width: 100%;
-    top: 50%;
-    padding: 0;
-}
 .segment left {
     left: 10px;
 }
@@ -32,17 +24,18 @@
     padding: 10px;
 }
 .caption-left  {
-    margin-left: calc(var(--left-margin-not-zero) * 0.9);
+    margin-left: calc(-.5 * var(--left-margin-not-zero));
+    margin-right: calc(.5 * var(--left-margin-not-zero));
     width: 50%;
     max-width: calc(980px / 2);
     float: left;
-    margin-right: 50%;
 }
 .caption-right{
     float: right;
+    margin-right: calc(-.5 * var(--left-margin-not-zero));
+    margin-left: calc(.5 * var(--left-margin-not-zero));
     width: 50%;
     max-width: calc(980px / 2);
-    margin-left: calc(50 * var(--vw));;
 }
 
 /*
@@ -57,14 +50,14 @@
 
 .segment p{
 
-    font-size: 1em;
+    font-size: 1.7vb;
     /*
     position: relative;
 
     position: fixed;
 
      */
-    padding: 1vh;
+    padding: 1em;
     /*
     background: rgba(202, 160, 104, 0.9);
      */

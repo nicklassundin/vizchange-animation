@@ -11,26 +11,30 @@ body {
     z-index: 3500;
 }
 
-.viz-lake-break {
+.viz-lake-thick, .viz-lake-break {
+    transform-origin: top left;
     pointer-events: all;
     position: relative;
     aspect-ratio: 980 / 560;
     width: var(--max-width-adjusted);
     height: var(--max-height-adjusted);
-    transform-origin: top left;
-    /*
-    transform: skew(0deg,0deg) scale(.273);
-
-     */
-    transform: scale(.273) translate(100%, 75%) skew(-60deg, 30deg);
     transition-timing-function: ease;
     transition: left 1s, width 1s, height 1s, background-color 1s, transform 1s;
 }
-.viz-lake-break:hover {
-    transform: translate(-10%, 25%) scale(.9);
+
+.viz-lake-break {
+    transform: scale(.273) translate(100%, 75%) skew(-60deg, 30deg) !important;
 }
+.viz-lake-break:hover {
+    transform: translate(-10%, 25%) scale(.9)!important;
+}
+
 .viz-lake-break:hover .highcharts-background {
     opacity: .9;
+}
+
+.viz-lake-break:hover .highcharts-caption {
+    opacity: 1;
 }
 /* plot class that has a hover .viz-lake-break that is hovered, that other .plot will be hidden */
 .plot:has(.viz-lake-break:hover) + .plot {
@@ -38,31 +42,29 @@ body {
 }
 
 .viz-lake-thick {
-    pointer-events: all;
-    position: relative;
-    aspect-ratio: 980 / 560;
-    width: var(--max-width-adjusted);
-    height: var(--max-height-adjusted);
-    transform-origin: top left;
     transform: scale(.273) translate(30%, 152%) skew(0, 30deg);
-    transition-timing-function: ease;
-    transition: width 1s, height 1s, background-color 1s, transform 1s;
 }
-
 .viz-lake-thick:hover {
     transform: translate(-10%, 25%) scale(.9);
 }
 .viz-lake-thick:hover .highcharts-background {
     opacity: .9;
 }
+.viz-lake-thick:hover .highcharts-caption {
+    opacity: 1;
+}
+.highcharts-container {
+    aspect-ratio: 980 / 560;
+    width: var(--max-width-adjusted)!important;
+    height: var(--max-height-adjusted)!important;
+}
 .highcharts-background {
     transition: opacity 1s;
     opacity: 0;
 }
-
-.highcharts-container  {
-    width: fit-content!important;
-    height: fit-content!important;
+.highcharts-caption {
+    transition: opacity .5s;
+    opacity: 0;
 }
 .highcharts-container * {
     position:fixed;
