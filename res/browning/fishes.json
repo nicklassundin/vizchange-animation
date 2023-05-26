@@ -6,6 +6,7 @@
     "text": [{
       "id": "char-scene-text 1",
       "header": "",
+      "class": "caption-right",
       "text": "arctic char (salvelinus alpinus): loves the cold winter, but struggles in the heat average size / 30 - 50 cm"
     }]
   },{
@@ -22,6 +23,7 @@
       "text": [{
         "id": "trout-scene-text 1",
         "header": "",
+        "class": "caption-right",
         "text": "brown trout (salmo trutta): has trouble seeing where it’s going, making it easy prey\naverage size / 30 - 50 cm"
       }]
     },{
@@ -54,19 +56,17 @@
       "text": [{
         "id": "pike-scene-text 1",
         "header": "",
+        "class": "caption-right",
         "text": "pike (esox lucius): enjoys a warm bath—even big predators like luxury\naverage size / 40 - 60 cm"
-      },{
-        "id": "salmon-text 1",
-        "header": "",
-        "text": ""
       }]
     },{
       "id": "salmon-scene",
       "menu": [],
       "text": [{
         "id": "salmon-text 1",
+
         "header": "",
-        "text": ""
+        "text": "arctic salmon (salmo salar): can live in the salty ocean, fresh rivers, and fresh lakes, but brown water? No thanks!\naverage size / 70 - 100 cm"
       }]
     },{
     "id": "fishes-outro",

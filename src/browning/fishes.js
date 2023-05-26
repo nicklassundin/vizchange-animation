@@ -37,7 +37,7 @@ export class Fishes extends Phrase{
             scrollTrigger:{
                 trigger: `#${id}-scene`,
                 start: "top center",
-                end: "bottom top",
+                end: "center center",
                 //markers: true,
                 //pin: true,
                 //pinnedContainer: true,

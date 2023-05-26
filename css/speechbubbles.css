@@ -6,15 +6,9 @@
 
 .captions {
     z-index: 50000!important;
-
-    /*
-    TODO set position to fixed
-     */
     position: sticky;
     left: 1vw;
-    top: calc(var(--margin-top-height) * 0.95);
-    margin: 0;
-
+    padding-top: calc(var(--margin-top-height) + var(--max-height-adjusted) / 2);
     pointer-events: none;
 }
 
@@ -24,11 +18,11 @@
     padding: 10px;
 }
 .caption-left  {
+    float: left;
     margin-left: calc(-.5 * var(--left-margin-not-zero));
     margin-right: calc(.5 * var(--left-margin-not-zero));
     width: 50%;
     max-width: calc(980px / 2);
-    float: left;
 }
 .caption-right{
     float: right;
@@ -49,18 +43,8 @@
  */
 
 .segment p{
-
     font-size: 1.7vb;
-    /*
-    position: relative;
-
-    position: fixed;
-
-     */
     padding: 1em;
-    /*
-    background: rgba(202, 160, 104, 0.9);
-     */
     background: #eeffee;
     border-radius: 5px;
     border-style: solid;
@@ -70,16 +54,8 @@
 
 /* Speach bouble Quote */
 .segment p:before{
-   /*
-    content: "\201C"; /*Unicode for Left Double Quote*/
-    /*Font*/
     font-family: Vemana2000;
     font-weight: bold;
-    /*Positioning*/
-    /*
-    position: absolute;
-
-     */
     left: 20px;
     top: 5px;
     overflow: hidden;

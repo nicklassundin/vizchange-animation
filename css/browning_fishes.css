@@ -3,7 +3,6 @@ body {
     background-color: rgb(17, 29, 44);
 }
 .content, .content *{
-    overflow: hidden;
 }
 .content {
     background: linear-gradient(to bottom,

@@ -24,7 +24,13 @@
         -->
     </head>	<body>
     <script type="text/javascript">
-    
+        window.addEventListener("load", function () {
+            // Set a timeout...
+            setTimeout(function () {
+                // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
     
         let innerHeight = window.innerHeight;
         let innerWidth = window.innerWidth;
@@ -248,17 +254,6 @@
             </div>
     
     <div class="bottom margin">
-        <div class="credits">
-            <p>
-                <p>Artist and Artistic Director</p>
-                <a href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-bocquet-2801a1187/">Hélène Bocquet</a>
-            </p>
-            <br>
-            <p>
-                <p>Developer</p>
-                <a href="https://github.com/nicklassundin">Nicklas Sundin Johansson</a>
-            </p>
-        </div>
     </div>
     <div class="right-side margin"></div>
     <div class="bottom-right margin corner"></div>
@@ -267,7 +262,19 @@
     <div class="top margin"></div>
     <div class="top-left margin corner"></div>
     <div class="top-right margin corner"></div>
+    
     <!--
+    <div class="credits">
+        <p>
+        <p>Artist and Artistic Director</p>
+        <a href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-bocquet-2801a1187/">Hélène Bocquet</a>
+        </p>
+        <br>
+        <p>
+        <p>Developer</p>
+        <a href="https://github.com/nicklassundin">Nicklas Sundin Johansson</a>
+        </p>
+    </div>
     -->	</body>
     <script>
         let trig = function(){

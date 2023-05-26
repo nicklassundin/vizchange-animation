@@ -63,8 +63,6 @@ html, body, body * {
 }
 
 .content {
-	aspect-ratio: 980 / 560;
-	max-height: var(--max-height);
 	max-width: var(--max-width);
 	position: relative;
 	margin: 0;
