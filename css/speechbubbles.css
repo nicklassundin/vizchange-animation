@@ -46,10 +46,11 @@
     font-size: 1.7vb;
     padding: 1em;
     background: #eeffee;
-    border-radius: 5px;
+    border-radius: .5vb;
     border-style: solid;
     border-width: 0.2vw;
-    color: #333333;
+    margin-top: -0.2vw;
+    border-color: var(--border-color);
 }
 
 /* Speach bouble Quote */

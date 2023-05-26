@@ -3,7 +3,7 @@
 .margin {
     background: #ffffff;
     border-style: solid;
-    border-color: #111111;
+    border-color: var(--border-color);
     position: fixed;
     z-index: 30000;
 }
@@ -11,16 +11,16 @@
 
 .corner {
     border-width: 0;
-    z-index: 30010!important;
+    z-index: 29000!important;
 }
 
 .bottom {
-    border-width: 0.2vh 0 0 0;
+    border-width: 0.2vw 0 0 0;
     width: calc(var(--max-width-adjusted) - 6 * var(--vw));
     height: calc(100 * var(--vh) - var(--max-height-adjusted) + 100px);
     top: calc(var(--max-height-adjusted) + var(--margin-top-height));
     left: calc(var(--left-margin) + 3 * var(--vw));
-    z-index: 30020!important;
+    z-index: 29000!important;
 }
 
 .credits {
@@ -55,18 +55,15 @@
 .right-side {
     border-width: 0 0 0 0.2vw;
     background-blend-mode: darken, luminosity;
-    width: 100%;
-    height: var(--max-height-adjusted);
-    max-height: calc(100% - (100% - var(--max-height)));
-    bottom: var(--right-side-bottom);
+    width: calc(2 * (100 * var(--vw) - var(--max-width-adjusted) + 3 * var(--vw) - var(--left-margin)));
+    height: calc(var(--max-height-adjusted) + 2 * var(--margin-border-height));
     left: calc(var(--max-width-adjusted) + calc(var(--left-margin) - 3 * var(--vw)));
     top: var(--margin-top-height);
 }
 .bottom-right {
-    border-color: #eeeeee;
+    border-color: var(--border-color);
     width: 100%;
     height: calc(100 * var(--vh) - var(--max-height-adjusted) + 100px);
-
     top: calc(var(--max-height-adjusted) + var(--margin-top-height));
     bottom: 0;
     left: calc(var(--max-width-adjusted) + calc(var(--left-margin) - 3 * var(--vw)));
@@ -78,16 +75,16 @@
     border-width: 0 0.2vw 0 0;
     background-blend-mode: darken, luminosity;
     width: calc(var(--left-margin) + 3 * var(--vw));
-    height: var(--max-height-adjusted);
-    bottom: calc(100* var(--vh) - var(--max-height));
+    height: calc(var(--max-height-adjusted) + 2 * var(--margin-border-height));
     left: 0;
     top: var(--margin-top-height);
 }
 .bottom-left {
     width: calc(var(--left-margin) + 3 * var(--vw));
-    height: calc(100 * var(--vh) - var(--max-height-adjusted)*0.75);
-    bottom: 0;
+    height: calc(100 * var(--vh) - var(--max-height-adjusted) + 100px);
     left: 0;
+    border-width: 0.2vw 0 0 0;
+    top: calc(var(--max-height-adjusted) + var(--margin-top-height));
 }
 .top-right {
     top: 0;
@@ -99,8 +96,12 @@
     height: var(--margin-top-height);
     width: calc(var(--left-margin-not-zero) + 3 * var(--vw));
     top: 0;
+
+    border-width: 0 0 0.2vw 0;
+
 }
 .top {
+    z-index: 29000!important;
     border-width: 0 0 0.2vw 0;
     height: var(--margin-top-height);
     width: calc(var(--max-width-adjusted) - 6 * var(--vw));

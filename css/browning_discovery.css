@@ -5,6 +5,7 @@
 #fishes,
 #fishes2,
 #fishes3,
-#nutri1, #nutri2, #nutri3, #carbon, #extra, #zoom{
+#nutri1, #nutri2, #nutri3, #carbon, #extra, #zoom, #ice {
     opacity: 0;
+    z-index: 45000;
 }

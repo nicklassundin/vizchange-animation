@@ -4,7 +4,7 @@
     position: absolute;
 }
 .fotnote {
-    z-index: 25000!important;
+    z-index: 50000!important;
     position: relative;
 }
 .header, .fotnote {

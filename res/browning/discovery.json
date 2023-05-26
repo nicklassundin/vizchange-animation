@@ -4,37 +4,20 @@
     {
       "id": "intro"
     },{
-    "id": "dive-intro",
-    "title": "Browning",
-    "menu": [{
-      "text": "Intro",
-      "href": "/browning-menu"
-    },{
-      "text": "Immersion",
-      "href": "/browning-imersive"
-    },{
-      "text": "Discovery Dive",
-      "href": "/browning-discovery"
-    },{
-      "text": "Fish Stories",
-      "href": "/browning-fishes"
-    },{
-      "text": "Local Evidencia",
-      "href": "/browning-evidence"
-    }],
-    "text": []
-  },{
     "id": "dive-yesterday",
     "menu": [],
     "text": [{
       "id": "dive-yesterday-text 1",
+      "class": "caption-right",
       "header": "You decided to face your fears and jump in! Welcome to the lake. The water features lots of big algae and plants thanks to the penetrating light, and the fish seem happy here.",
       "text": "The deep wedge in the rocky ground is called permafrost: soil that has been frozen for a long time."
     },{
       "id": "dive-yesterday-text 2",
+      "class": "caption-right",
       "text":  "Due to multiple factors, some of which you witnessed on your way down—like warmer temperatures, and increased precipitation—permafrost is thawing."
     },{
       "id": "dive-yesterday-text 3",
+      "class": "caption-right",
       "text":  "When permafrost thaws, the ground becomes unstable and vegetation can collapse. This results in streams of carbon-rich water filled with debris like branches, leaves, and soil, flowing into the lake, while the wind carries other natural debris into the water. Now the water has begun browning, too!\n\n- Let’s dive in, and explore the carbon cycle!\n- It has multiple steps that I repeat over and over\n- Sedimentation : As I sink into the water, I bring outside carbon with me—like little leaves and sticks that were stuck to my body before I jumped in!\n- Burial : I take a little break at the bottom, enjoying the view.\n-Decomposition: Then I go back up for air, but usually leave some carbon behind. So I gather some more, and I’m ready for another jump!"
     }]
   },{
@@ -42,12 +25,15 @@
     "menu": [],
     "text": [{
       "id": "dive-today-text 1",
+      "class": "caption-right",
       "text":  "The high-latitude lake water is far from empty—it’s home to lots of living organisms."
     },{
         "id": "dive-today-text 2",
+      "class": "caption-right",
         "text":"Some are invisible to our eyes, like tiny fish (zooplankton), small algae (phytoplankton), or little remains of birch trees (organic carbon). "
       },{
         "id": "dive-today-text 3",
+      "class": "caption-right",
         "text": "Some are easily visible, like the larger fish: click on them to learn who they are! \nThey all coexist in the food web. In browning lakes, populations of organisms that need sunlight to survive, like algae and aquatic plants, are dwindling. This makes it hard for fish to eat, and hide from predators. Like humans, fish can only thrive under certain conditions. (For example, they need sufficient oxygen, safe temperatures, and abundant food.) But just like us, fish have unique tastes and sensibilities. The lake has recently become home to fish species that enjoy nutrient-rich environments, and recently moved in from elsewhere. (Maybe they migrated toward this newly carbon-heavy body of water on their own, or perhaps they were released into the water by humans, for fishing purposes.) Other fish are threatened by their new world—all of a sudden, the lake too warm for them and their eggs to survive, and they struggle to find food in the dark. They might start dying off, or migrating elsewhere, as a result."
       }]
   },{
@@ -55,12 +41,15 @@
       "menu": [],
       "text": [{
         "id": "dive-tomorrow-text 1",
+        "class": "caption-right",
         "text":  "Look at which fish live in which conditions. Hot and cold water contain different oxygen levels, and therefore, different types of fish. Fish usually prefer the warmest and most oxygenated layer of water."
       },{
       "id": "dive-tomorrow-text 4",
+        "class": "caption-right",
       "text": "As the lake gets browner, this phenomenon will increase, and fish habitats will continue to shrink. Old species will disappear (for example, arctic char), and only the newer, or better-adapted species will survive (like pike or perch).\nA column of lake water has a top part, or “pelagic zone,” where most of the food web lives, and a bottom, or “benthic” layer, which contains the most waste; mostly dead algae and plants. Fish are the lake residents with which we humans are most familiar \n- Be it swimming for fun, or fishing to feast, we encounter them a lot. \n- But as lake water gets browner and warmer, lakes’ ice cover changes.\n- So our winter activities like skating or skiing are impacted, too! "
     },{
       "id": "dive-tomorrow-text 5",
+        "class": "caption-right",
       "text": "Have you heard of lapplandsmästerskapet? It’s an ice fishing competition here on Torneträsk that brings together people from all over Scandinavia, each aiming to catch the biggest fish. It used to be held each May, but due to the changing ice cover of the lake, it must now take place in April: lakes are clearly changing."
     }]
   }],
@@ -91,7 +80,7 @@
       "file": "/res/browning/discovery/background_far.png"
     },{
       "id": "D2",
-      "level": "background",
+      "level": "background-front",
       "file": "/res/browning/imersion/d/2d-background.png"
     },{
       "id": "D3",
@@ -161,7 +150,7 @@
       "path": "/res/browning",
       "files": [{
           "id": "bg2",
-          "level": "background-front",
+          "level": "background",
           "file": "/res/browning/discovery/background_close.png"
         },
         {

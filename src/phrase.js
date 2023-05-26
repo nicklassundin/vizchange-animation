@@ -127,17 +127,15 @@ export class verticalAnimation {
     }
     addLakeAlign (start = 0) {
         //this.timeline.from(this.ids.alignBackground, {opacity: 0, duration: 1}, start)
+        this.timeline.to(this.ids.alignBackground, { x: '-58.45%', duration: 2}, start)
+        this.timeline.to('#D1', { x: '-33.45%', duration: 2}, '<')
 
-        this.timeline.to(this.ids.alignBackground, { x: '-15.6%', duration: 2}, start)
-
-
-        this.timeline.from(this.ids.background, {opacity: 0, x: '8.45%', duration: 2}, '<')
+        this.timeline.from(this.ids.background, {x: '58.45%', duration: 2}, '<')
+        this.timeline.from(this.ids.background, {opacity: 0, duration: 1}, '>-1')
 
         this.timeline.from(this.ids.detail, {opacity: 0, duration: 2}, '<')
-        this.timeline.from(this.ids.foreground, { x: '15.6%', duration: 2}, '>')
+        //this.timeline.from(this.ids.foreground, { x: '15.6%', duration: 2}, '>')
 
-
-        this.timeline.from(this.ids.foreground, {opacity: 0, duration: 1}, '>')
 
 
         this.timeline.to(this.ids.alignBackground, {y: '-19.7%',  duration: 1}, '>')
@@ -145,30 +143,21 @@ export class verticalAnimation {
 
         this.timeline.from(this.ids.background, {y: '19.7%', duration: 1}, '<')
         this.timeline.from(this.ids.foreground, {y: '19.7%', duration: 1}, '<')
+        this.timeline.to('#D1', { y: '-5%', duration: 2}, '<')
 
         //this.timeline.from(this.ids.background, {opacity: 0, duration: 1}, '>')
 
-        let keeper = this.ids.alignBackground.shift()
         this.timeline.to(this.ids.alignBackground, {opacity: 0, duration: 0}, '>')
-        this.ids.alignBackground = keeper;
+        this.ids.alignBackground = '#D1';
         // after
 
     }
     addVertical (start = '>') {
-        let value = 20
+        let value = 33.33333;
         this.times += 1;
-        this.timeline.to(this.ids.background, {x: `-${value/2*this.times}%`, duration: 1}, start)
 
-        this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.foreground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.detail, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-
-        this.timeline.to(this.ids.popup[0], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-
-        let init = '>'
-        for(var i = 0; i < this.times; i++) {
+        let init = start;
+        for(let i = 0; i < this.times; i++) {
             if(i == this.times-1){
                 this.timeline.to(this.ids.popup[i], {opacity: 1, duration: 1}, init)
             }else{
@@ -176,25 +165,19 @@ export class verticalAnimation {
             }
             init = '<'
         }
+        this.timeline.to(['.left-side'], {x: '-90%', duration: 1}, '>');
+        this.timeline.to(['.right-side'], {x: '-25%', duration: 1}, '>');
 
 
-        this.ids.text[this.times-1].map((each, i) => {
-            this.timeline.from(each, {opacity: 0, duration: 3}, '>-1')
-        })
-        this.ids.text[this.times-1].map((each, i) => {
-            this.timeline.to(each, {opacity: 0, duration: 3}, '>-2')
-        })
-
-
-
-        this.timeline.to(this.ids.background, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.alignBackground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.foreground, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.detail, {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.popup[0], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.popup[1], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-        this.timeline.to(this.ids.popup[2], {x: `-${value/2*this.times}%`, duration: 1}, '<')
-
+        if(this.times < 3){
+            this.timeline.to(this.ids.background, {x: `-${value*this.times}%`, duration: 1}, '>')
+            this.timeline.to(this.ids.alignBackground, {x: `-${value*this.times}%`, duration: 1}, '<')
+            this.timeline.to(this.ids.foreground, {x: `-${value*this.times}%`, duration: 1}, '<')
+            this.timeline.to(this.ids.detail, {x: `-${value*this.times}%`, duration: 1}, '<')
+            this.timeline.to(this.ids.popup[0], {x: `-${value*this.times}%`, duration: 1}, '<')
+            this.timeline.to(this.ids.popup[1], {x: `-${value*this.times}%`, duration: 1}, '<')
+            this.timeline.to(this.ids.popup[2], {x: `-${value*this.times}%`, duration: 1}, '<')
+        }
     }
     fadeOut (start = '>') {
         this.timeline.to(this.ids.popup[0], {opacity: 0, duration: 1}, start)

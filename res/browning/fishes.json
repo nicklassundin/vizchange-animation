@@ -1,6 +1,38 @@
 {
   "id": "fishes",
   "scens": [{
+    "id": "fishes-intro",
+    "menu": [],
+    "text": [{
+      "id": "fishes-intro-text",
+      "header": "",
+      "text": "Look at which fish live in which conditions."
+    },{
+      "id": "fishes-intro-text",
+      "header": "",
+      "text": "Hot and cold water contain different oxygen levels, and therefore, different types of fish.  Fish usually prefer the warmest and most oxygenated layer of water. As the lake gets browner, this phenomenon will increase, and fish habitats will continue to shrink. Old species will disappear (for example, arctic char), and only the newer, or better-adapted species will survive (like pike or perch)."
+    },{
+      "id": "fishes-intro-text",
+      "header": "",
+      "text": "A column of lake water has a top part, or “pelagic zone,” where most of the food web lives, and a bottom, or “benthic” layer, which contains the most waste; mostly dead algae and plants."
+    },{
+      "id": "fishes-intro-text 2",
+      "header": "",
+      "text": "- Fish are the lake residents with which we humans are most familiar"
+    },{
+      "id": "fishes-intro-text 3",
+      "header": "",
+      "text": "- Be it swimming for fun, or fishing to feast, we encounter them a lot"
+    },{
+      "id": "fishes-intro-text 4",
+      "header": "",
+      "text": "- But as lake water gets browner and warmer, lakes’ ice cover changes."
+    },{
+      "id": "fishes-intro-text 5",
+      "header": "",
+      "text": "- So our winter activities like skating or skiing are impacted, too ! \nHave you heard of lapplandsmästerskapet? It’s an ice fishing competition here on Torneträsk that brings together people from all over Scandinavia, each aiming to catch the biggest fish. It used to be held each May, but due to the changing ice cover of the lake, it must now take place in April: lakes are clearly changing."
+    }]
+  },{
     "id": "char-scene",
     "menu": [],
     "text": [{
