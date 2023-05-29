@@ -1,7 +1,12 @@
-
+const {Audio} = require("../core/audio");
 const {verticalAnimation} = require("../phrase");
 export class Discovery {
     constructor() {
+
+        this.audio = {
+            lake: new Audio('audioLake'),
+        }
+        this.audio.lake.fadeAudio('discovery', 'discovery')
         //let dive_yester = new Phrase('#lake', 'landscape', '#d1', '#bg2', '#fg1', '#fg2', '#fg3', '#title')
         let dive = new verticalAnimation('#dive-intro',
             'landscape',

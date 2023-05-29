@@ -72,6 +72,10 @@
       "href": "/browning-evidence"
     }]
   },
+  "audio": [{
+    "id": "audioLake",
+    "src": "/res/browning/audio/lake.mp3"
+  }],
   "resources": [{
     "path": "/res/browning",
     "files": [{

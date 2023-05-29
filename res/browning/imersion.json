@@ -62,6 +62,19 @@
       "href": "/browning-evidence"
     }]
   },
+  "audio": [{
+    "id": "audioLake",
+    "src": "/res/browning/audio/lake.mp3"
+  },{
+    "id": "audioMosquitos",
+    "src": "/res/browning/audio/mosquitos.mp3"
+  },{
+    "id": "audioStream",
+    "src": "/res/browning/audio/stream.mp3"
+  },{
+    "id": "audioWind",
+    "src": "/res/browning/audio/wind.mp3"
+  }],
   "resources" : [{
     "path": "/res/browning",
     "files": [{

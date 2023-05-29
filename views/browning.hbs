@@ -4,6 +4,11 @@
 	<body>
     {{> script this}}
     {{#each acts}}
+
+        {{#each this.audio}}
+            <audio id="{{this.id}}" src="{{this.src}}" type="audio/mpeg" controls autoplay></audio>
+        {{/each}}
+
         <div class="content" id={{this.id}}>
             {{#each this.scens}}
                 <div id={{this.id}} class="segment">

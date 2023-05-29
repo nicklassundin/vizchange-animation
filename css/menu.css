@@ -10,7 +10,7 @@
     overflow: hidden;
     top: calc(50 * var(--vh));
     width: calc(100 * var(--vw));
-    margin-left: calc(-1 * var(--left-margin-not-zero));
+    margin-left: calc(-1 * var(--left-margin));
     max-width: 100vw;
     height: auto;
     max-height: calc(var(--max-height-adjusted) * 0.2);

@@ -11,6 +11,7 @@
 	--max-height: calc(min(75 * var(--vh), 560px));
 	--max-height-ratio: calc(540px / var(--max-width));
 	--max-height-adjusted: calc(min(75 * var(--vh), min(560px, var(--max-width) * var(--ratio-rev))));
+	--max-height-adjusted: calc(min(75 * var(--vh), min(560px, var(--max-width) * var(--ratio-rev))));
 
 	--max-width: calc(min(100 * var(--vw), 980px));
 	--max-width-ratio: calc(980px / var(--max-height));
