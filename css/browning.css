@@ -20,7 +20,7 @@
 	--right-side-bottom: calc(100 * var(--vh) - var(--max-height));
 	--margin-border-height: calc(0.2 * var(--vh));
 	--margin-border-width: calc(0.2 * var(--vw));
-
+	--max-plot-ratio: calc(560px / var(--max-height-adjusted));
 	/*
 	--margin-top-height: calc(10 * var(--vh));
 	 */

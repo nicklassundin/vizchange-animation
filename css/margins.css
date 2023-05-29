@@ -11,7 +11,7 @@
 
 .corner {
     border-width: 0;
-    z-index: 29000!important;
+    z-index: 29900!important;
 }
 
 .bottom {
@@ -20,7 +20,7 @@
     height: calc(100 * var(--vh) - var(--max-height-adjusted) + 100px);
     top: calc(var(--max-height-adjusted) + var(--margin-top-height));
     left: calc(var(--left-margin) + 3 * var(--vw));
-    z-index: 29000!important;
+    z-index: 29900!important;
 }
 
 .credits {

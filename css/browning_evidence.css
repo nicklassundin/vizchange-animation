@@ -7,7 +7,7 @@ body {
     position: fixed!important;
     top: var(--margin-top-height)!important;
     object-fit: cover!important;
-    z-index: 3500;
+    z-index: 29010;
 }
 .viz-lake-thick, .viz-lake-break {
     transform-origin: top left;
@@ -23,7 +23,7 @@ body {
     transform: scale(.273) translate(100%, 75%) skew(-60deg, 30deg) !important;
 }
 .viz-lake-break:hover {
-    transform: translate(-10%, 25%) scale(.9)!important;
+    transform: scale(.85) translate(calc(var(--max-width-adjusted) * -0.10), 30%)!important;
 }
 .viz-lake-break:hover .highcharts-background {
     opacity: .9;
@@ -39,7 +39,7 @@ body {
     transform: scale(.273) translate(30%, 152%) skew(0, 30deg);
 }
 .viz-lake-thick:hover {
-    transform: translate(-10%, 25%) scale(.9);
+    transform: translate(calc(var(--max-width-adjusted) * -0.10), 25%) scale(.9);
 }
 .viz-lake-thick:hover .highcharts-background {
     opacity: .9;
