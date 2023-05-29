@@ -20,13 +20,19 @@ body {
     transition: left 1s, width 1s, height 1s, background-color 1s, transform 1s;
 }
 .viz-lake-break {
-    transform: scale(.273) translate(100%, 75%) skew(-60deg, 30deg) !important;
+    transform-origin: center left;
+}
+.viz-lake-break {
+    transform:  scale(.273) translate(37%, -45%) skew(-60deg, 30deg)!important;
 }
 .viz-lake-break:hover {
-    transform: scale(.85) translate(calc(var(--max-width-adjusted) * -0.10), 30%)!important;
+    transform: translate(calc(var(--max-width-adjusted) * -0.10), 30%) scale(.85)!important;
 }
 .viz-lake-break:hover .highcharts-background {
     opacity: .9;
+}
+.viz-lake-break:hover .highcharts-series-group * {
+    opacity: 1;
 }
 .viz-lake-break:hover .highcharts-caption {
     opacity: 1;
@@ -44,6 +50,9 @@ body {
 .viz-lake-thick:hover .highcharts-background {
     opacity: .9;
 }
+.viz-lake-thick:hover .highcharts-series-group * {
+    opacity: 1;
+}
 .viz-lake-thick:hover .highcharts-caption {
     opacity: 1;
 }
@@ -52,7 +61,7 @@ body {
     width: var(--max-width-adjusted)!important;
     height: var(--max-height-adjusted)!important;
 }
-.highcharts-background {
+.highcharts-background, .highcharts-series-group * {
     transition: opacity 1s;
     opacity: 0;
 }
