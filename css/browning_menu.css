@@ -31,5 +31,9 @@
     animation-iteration-count: infinite;
     transform-origin: 50% 90%;
     animation-name: clouds;
-    animation-duration: 12s;
+    animation-duration: 8s;
+}
+
+map * {
+    transform: scale(.8);
 }

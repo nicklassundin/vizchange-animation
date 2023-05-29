@@ -1,7 +1,6 @@
 body {
     background-color: #b3ced6;
 }
-
 .plot {
     pointer-events: none;
     left: var(--left-margin);
@@ -10,7 +9,6 @@ body {
     object-fit: cover!important;
     z-index: 3500;
 }
-
 .viz-lake-thick, .viz-lake-break {
     transform-origin: top left;
     pointer-events: all;
@@ -21,18 +19,15 @@ body {
     transition-timing-function: ease;
     transition: left 1s, width 1s, height 1s, background-color 1s, transform 1s;
 }
-
 .viz-lake-break {
     transform: scale(.273) translate(100%, 75%) skew(-60deg, 30deg) !important;
 }
 .viz-lake-break:hover {
     transform: translate(-10%, 25%) scale(.9)!important;
 }
-
 .viz-lake-break:hover .highcharts-background {
     opacity: .9;
 }
-
 .viz-lake-break:hover .highcharts-caption {
     opacity: 1;
 }
@@ -40,7 +35,6 @@ body {
 .plot:has(.viz-lake-break:hover) + .plot {
     display: none;
 }
-
 .viz-lake-thick {
     transform: scale(.273) translate(30%, 152%) skew(0, 30deg);
 }

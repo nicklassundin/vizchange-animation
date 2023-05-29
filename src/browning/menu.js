@@ -94,7 +94,6 @@ export class Menu extends Phrase {
             setCurrent(`Winter_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
-
     }
     'createTimeTimeline' () {
         let today = ['.lake_today']

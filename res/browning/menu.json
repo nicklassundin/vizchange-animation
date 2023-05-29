@@ -71,22 +71,22 @@
         "file": "/res/browning/menu/background/title.png",
         "clickable": [{
             "id": "areaArrowLeft",
-            "coords": "305,375,335,405"
+            "coords": "315,385,345,415"
           },{
             "id": "springButton",
-            "coords": "330,350,355,375"
+            "coords": "340,360,365,385"
           },{
             "id": "summerButton",
-            "coords": "370,325,400,355"
+            "coords": "380,335,410,365"
           },{
             "id": "autumnButton",
-            "coords": "545,320,575,350"
+            "coords": "555,330,585,360"
           },{
             "id": "winterButton",
-            "coords": "595,350,625,380"
+            "coords": "605,360,635,390"
           },{
             "id": "areaArrowRight",
-            "coords": "625,375,655,405"
+            "coords": "635,385,665,415"
           }]
       },{
         "id": "lake_yesterday",
