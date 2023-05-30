@@ -31,6 +31,7 @@
 	--bottom-margin-not-zero: calc(max(var(--max-height), -1 * var(--max-height)) / 2 + var(--max-height)/2);
 	/* colors */
 	--border-color: #495374;
+	--border-width: min(5px, .2vb);
 }
 
 
