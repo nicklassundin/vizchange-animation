@@ -165,12 +165,12 @@ export class verticalAnimation {
             }
             init = '<'
         }
-        this.timeline.to(['.left-side'], {x: '-90%', duration: 1}, '>');
-        this.timeline.to(['.right-side'], {x: '-25%', duration: 1}, '>');
+        this.timeline.to(['.left-side'], {x: '-90%', duration: 3}, '>');
+        this.timeline.to(['.right-side'], {x: '-40%', duration: 3}, '<');
 
 
         if(this.times < 3){
-            this.timeline.to(this.ids.background, {x: `-${value*this.times}%`, duration: 1}, '>')
+            this.timeline.to(this.ids.background, {x: `-${value*this.times}%`, duration: 1}, '<')
             this.timeline.to(this.ids.alignBackground, {x: `-${value*this.times}%`, duration: 1}, '<')
             this.timeline.to(this.ids.foreground, {x: `-${value*this.times}%`, duration: 1}, '<')
             this.timeline.to(this.ids.detail, {x: `-${value*this.times}%`, duration: 1}, '<')

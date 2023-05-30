@@ -25,13 +25,31 @@ export class Menu extends Phrase {
         this.current = 'Spring_yesterday';
         this.timelines.menu.seek(this.current)
         // add event listener for mouse click
+
+        // parse coords
+
+        // get all class .menuButton and rescale elements parameter coords each button from size of #title
+        let scale = function (el) {
+            let title = document.getElementById('title')
+            let titleRect = title.getBoundingClientRect()
+            let elRect = el.coords.split(',').map(x => parseInt(x))
+            let scale = titleRect.width / 980
+            let x = (elRect[0] - titleRect[2])
+            let y = (elRect[1] - titleRect[3])
+            console.log(elRect, scale, elRect.map(x => x*scale))
+            el.coords = elRect.map(x => x*scale).join(',')
+        }
+        let buttons = Object.values(document.getElementsByClassName('menu_button'))
+        buttons.forEach(button => {
+            scale(button)
+        })
         let isActive = () => {
             return this.timelines.menu.isActive() || this.timelines.time.isActive()
         }
         let getTimelines = () => this.timelines;
         let getCurrent = () => this.current;
         let setCurrent = (name) => this.current = name;
-        $(".areaArrowRight").on("click", function(e){
+        $("#areaArrowRight").on("click", function(e){
             if(isActive()) return false
             e.preventDefault()
             getTimelines().time.reversed(false)
@@ -49,7 +67,7 @@ export class Menu extends Phrase {
                 default:
             }
         });
-        $(".areaArrowLeft").on("click", function(e){
+        $("#areaArrowLeft").on("click", function(e){
             if(isActive()) return false
             e.preventDefault();
             getTimelines().time.reversed(true)
@@ -69,26 +87,26 @@ export class Menu extends Phrase {
                 default:
             }
         })
-        $(".springButton").on("click", function(e){
+        $("#springButton").on("click", function(e){
             if(isActive()) return false
             e.preventDefault();
             setCurrent(`Spring_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
-        $(".summerButton").on("click", function(e){
+        $("#summerButton").on("click", function(e){
             if(isActive()) return false
             e.preventDefault();
             setCurrent(`Summer_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
 
         })
-        $(".autumnButton").on("click", function(e){
+        $("#autumnButton").on("click", function(e){
             if(isActive()) return false
             e.preventDefault();
             setCurrent(`Autumn_${getTimelines().time.previousLabel()}`)
             getTimelines().menu.play(getCurrent())
         })
-        $(".winterButton").on("click", function(e){
+        $("#winterButton").on("click", function(e){
             if(isActive()) return false
             e.preventDefault();
             setCurrent(`Winter_${getTimelines().time.previousLabel()}`)

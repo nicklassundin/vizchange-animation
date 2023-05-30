@@ -5,7 +5,7 @@
 .fotnote {
     position: relative;
 }
-.header, .fotnote {
+.header {
     z-index: 29000!important;
     overflow: hidden;
     top: calc(50 * var(--vh));
@@ -20,11 +20,23 @@
     border-style: solid;
     border-width: var(--margin-border-height) 0 var(--margin-border-height) 0;
 }
+.fotnote {
+    top: calc(var(--margin-top-height) + var(--max-height-adjusted) * 0.5);
+    margin: auto;
+    z-index: 50000!important;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1em;
+    border-style: solid;
+    padding: 1em;
+    width: max-content;
+    border-width: var(--margin-border-height);
+}
 
 .button {
     background-color: #527cfa;
     padding: .5em;
-    border-radius: 0.1em;
+    border-radius: 1em;
     border-style: solid;
     border-width: 0.2vh;
     border-color: #111111;

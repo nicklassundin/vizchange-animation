@@ -9,7 +9,7 @@
             <image class="image-block {{this.level}} {{this.class}}" style="z-index: {{this.level}}" id={{this.id}} src={{this.file}} usemap="#map_{{this.id}}"></image>
             <map name="map_{{this.id}}">
                 {{#each this.clickable}}
-                    <area class="{{this.id}}" shape="rect" coords={{this.coords}} alt="Sun" href="#">
+                    <area class="menu_button" id="{{this.id}}" shape="rect" coords={{this.coords}} href="#">
                 {{/each}}
             </map>
         {{else}}

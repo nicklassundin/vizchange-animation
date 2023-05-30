@@ -15,25 +15,19 @@
                     {{> segment parameters=this}}
                 </div>
             {{/each}}
+            <div id="foter" class="segment">
+                <div class="fotnote">
+                    {{#each next.redirect}}
+                        <a class="button" href="{{this.href}}">{{this.text}}</a>
+                    {{/each}}
+                </div>
+            </div>
             {{#each this.resources}}
                 <div class="image-container">
                     {{> resources parameters=this }}
                 </div>
             {{/each}}
         </div>
-        {{#if next.redirect includeZero=true}}
-            <div class="content transparent">
-                <div class="segment">
-                    <div class="fotnote">
-                        <div class="menu">
-                            {{#each next.redirect}}
-                                <a class="button" href="{{this.href}}">{{this.text}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {{/if}}
     {{/each}}
 
     {{> margin}}

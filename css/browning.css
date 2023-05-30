@@ -44,8 +44,6 @@
 *::-webkit-scrollbar {
 	display: none;
 }
-
-
 body {
 	display: block;
 	flex-direction: column;
