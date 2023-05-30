@@ -113,6 +113,10 @@
             })
         })("imersion")
     </script>
+            <audio id="audioLake" src="/res/browning/audio/lake.mp3" type="audio/mpeg" controls autoplay></audio>
+            <audio id="audioMosquitos" src="/res/browning/audio/mosquitos.mp3" type="audio/mpeg" controls autoplay></audio>
+            <audio id="audioStream" src="/res/browning/audio/stream.mp3" type="audio/mpeg" controls autoplay></audio>
+            <audio id="audioWind" src="/res/browning/audio/wind.mp3" type="audio/mpeg" controls autoplay></audio>
         <div class="content" id=imersion>
                 <div id=titlescreen class="segment">
                     <!--TODO rename to type_github -->
@@ -169,43 +173,40 @@
                                 Looks like you made it to the lake ! Let’s swim ! But the water is so brown… It looks dark, you can’t see what’s underneath, are you sure you want to venture in it ?
                             </p>
                     </div>                </div>
-                <div class="image-container">
-                                <image class="image-block 10 " style="z-index: 10" id=a1 src=/vizchange-animation/res/browning/imersion/a/1a.png></image>
-                                <image class="image-block 20 " style="z-index: 20" id=a2 src=/vizchange-animation/res/browning/imersion/a/2a.png></image>
-                                <image class="image-block 30 " style="z-index: 30" id=a3 src=/vizchange-animation/res/browning/imersion/a/3a.png></image>
-                                <image class="image-block 1 " style="z-index: 1" id=a4 src=/vizchange-animation/res/browning/imersion/a/4a.png></image>
-                </div>
-                <div class="image-container">
-                                <image class="image-block 11 " style="z-index: 11" id=b1 src=/vizchange-animation/res/browning/imersion/b/1b-background.png></image>
-                                <image class="image-block 12 " style="z-index: 12" id=b2 src=/vizchange-animation/res/browning/imersion/b/2b-detail.png></image>
-                                <image class="image-block 1 " style="z-index: 1" id=b3 src=/vizchange-animation/res/browning/imersion/b/3b-clouds.png></image>
-                                <image class="image-block 19 " style="z-index: 19" id=b4 src=/vizchange-animation/res/browning/imersion/b/4b-ground.png></image>
-                </div>
-                <div class="image-container">
-                                <image class="image-block 9 " style="z-index: 9" id=c1 src=/vizchange-animation/res/browning/imersion/c/1c-background.png></image>
-                                <image class="image-block 13 " style="z-index: 13" id=c2 src=/vizchange-animation/res/browning/imersion/c/2c-detail.png></image>
-                                <image class="image-block 1 " style="z-index: 1" id=c3 src=/vizchange-animation/res/browning/imersion/c/3c-clouds.png></image>
-                                <image class="image-block 14 " style="z-index: 14" id=c4 src=/vizchange-animation/res/browning/imersion/c/4c-ground.png></image>
-                </div>
-                <div class="image-container">
-                                <image class="image-block 6 " style="z-index: 6" id=d1 src=/vizchange-animation/res/browning/discovery/background_far.png></image>
-                                <image class="image-block 7 " style="z-index: 7" id=d2 src=/vizchange-animation/res/browning/imersion/d/2d-background.png></image>
-                                <image class="image-block 16 " style="z-index: 16" id=d3 src=/vizchange-animation/res/browning/imersion/d/3d-water.png></image>
-                </div>
-        </div>
-            <div class="content transparent">
-                <div class="segment">
+
+                <div id="foter" class="segment">
                     <div class="fotnote">
-                        <div class="menu">
-                                <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
-                                <a class="button" href="/vizchange-animation#high">Immersion</a>
-                                <a class="button" href="/vizchange-animation/browning-discovery">Discovery Dive</a>
-                                <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
-                                <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
-                        </div>
+                            <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
+                            <a class="button" href="/vizchange-animation#high">Immersion</a>
+                            <a class="button" href="/vizchange-animation/browning-discovery">Discovery Dive</a>
+                            <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
+                            <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
                     </div>
                 </div>
-            </div>
+                <div class="image-container">
+                                <image class="image-block 10 " style="z-index: 10" id=a1 src="/vizchange-animation/res/browning/imersion/a/1a.png"></image>
+                                <image class="image-block 20 " style="z-index: 20" id=a2 src="/vizchange-animation/res/browning/imersion/a/2a.png"></image>
+                                <image class="image-block 30 " style="z-index: 30" id=a3 src="/vizchange-animation/res/browning/imersion/a/3a.png"></image>
+                                <image class="image-block 1 " style="z-index: 1" id=a4 src="/vizchange-animation/res/browning/imersion/a/4a.png"></image>
+                </div>
+                <div class="image-container">
+                                <image class="image-block 11 " style="z-index: 11" id=b1 src="/vizchange-animation/res/browning/imersion/b/1b-background.png"></image>
+                                <image class="image-block 12 " style="z-index: 12" id=b2 src="/vizchange-animation/res/browning/imersion/b/2b-detail.png"></image>
+                                <image class="image-block 1 " style="z-index: 1" id=b3 src="/vizchange-animation/res/browning/imersion/b/3b-clouds.png"></image>
+                                <image class="image-block 19 " style="z-index: 19" id=b4 src="/vizchange-animation/res/browning/imersion/b/4b-ground.png"></image>
+                </div>
+                <div class="image-container">
+                                <image class="image-block 9 " style="z-index: 9" id=c1 src="/vizchange-animation/res/browning/imersion/c/1c-background.png"></image>
+                                <image class="image-block 13 " style="z-index: 13" id=c2 src="/vizchange-animation/res/browning/imersion/c/2c-detail.png"></image>
+                                <image class="image-block 1 " style="z-index: 1" id=c3 src="/vizchange-animation/res/browning/imersion/c/3c-clouds.png"></image>
+                                <image class="image-block 14 " style="z-index: 14" id=c4 src="/vizchange-animation/res/browning/imersion/c/4c-ground.png"></image>
+                </div>
+                <div class="image-container">
+                                <image class="image-block 6 " style="z-index: 6" id=d1 src="/vizchange-animation/res/browning/discovery/background_far.png"></image>
+                                <image class="image-block 7 " style="z-index: 7" id=d2 src="/vizchange-animation/res/browning/imersion/d/2d-background.png"></image>
+                                <image class="image-block 16 " style="z-index: 16" id=d3 src="/vizchange-animation/res/browning/imersion/d/3d-water.png"></image>
+                </div>
+        </div>
     
     <div class="bottom margin">
     </div>

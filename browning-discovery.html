@@ -113,6 +113,7 @@
             })
         })("discovery")
     </script>
+            <audio id="audioLake" src="/res/browning/audio/lake.mp3" type="audio/mpeg" controls autoplay></audio>
         <div class="content" id=discovery>
                 <div id=intro class="segment">
                     <!--TODO rename to type_github -->
@@ -196,48 +197,45 @@
                                 Have you heard of lapplandsmästerskapet? It’s an ice fishing competition here on Torneträsk that brings together people from all over Scandinavia, each aiming to catch the biggest fish. It used to be held each May, but due to the changing ice cover of the lake, it must now take place in April: lakes are clearly changing.
                             </p>
                     </div>                </div>
-                <div class="image-container">
-                                <image class="image-block background-back " style="z-index: background-back" id=D1 src=/vizchange-animation/res/browning/discovery/background_far.png></image>
-                                <image class="image-block background-front " style="z-index: background-front" id=D2 src=/vizchange-animation/res/browning/imersion/d/2d-background.png></image>
-                                <image class="image-block ground " style="z-index: ground" id=D3 src=/vizchange-animation/res/browning/imersion/d/3d-water.png></image>
-                </div>
-                <div class="image-container">
-                                <image class="image-block ground-front " style="z-index: ground-front" id=bubbles src=/vizchange-animation/res/browning/discovery/popup1/bubbles.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=carbon src=/vizchange-animation/res/browning/discovery/popup1/carbon_cycle.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=extra src=/vizchange-animation/res/browning/discovery/popup1/extra.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes src=/vizchange-animation/res/browning/discovery/popup1/fishes_close.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=people src=/vizchange-animation/res/browning/discovery/popup1/people_closer.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes2 src=/vizchange-animation/res/browning/discovery/popup2/fishes.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=people2 src=/vizchange-animation/res/browning/discovery/popup2/foodweb.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=zoom src=/vizchange-animation/res/browning/discovery/popup2/zoom.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=people3 src=/vizchange-animation/res/browning/discovery/popup3/people_closer.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes3 src=/vizchange-animation/res/browning/discovery/popup3/fishes_close.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri1 src=/vizchange-animation/res/browning/discovery/popup3/nutrients_1.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri2 src=/vizchange-animation/res/browning/discovery/popup3/nutrients_2.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri2 src=/vizchange-animation/res/browning/discovery/popup3/nutrients_3.png></image>
-                                <image class="image-block ground-front " style="z-index: ground-front" id=ice src=/vizchange-animation/res/browning/discovery/popup3/ice_close.png></image>
-                </div>
-                <div class="image-container">
-                                <image class="image-block background " style="z-index: background" id=bg2 src=/vizchange-animation/res/browning/discovery/background_close.png></image>
-                                <image class="image-block ground " style="z-index: ground" id=fg1 src=/vizchange-animation/res/browning/discovery/foreground_1.png></image>
-                                <image class="image-block ground " style="z-index: ground" id=fg2 src=/vizchange-animation/res/browning/discovery/foreground_2.png></image>
-                                <image class="image-block ground " style="z-index: ground" id=fg3 src=/vizchange-animation/res/browning/discovery/foreground_3.png></image>
-                                <image class="image-block ground " style="z-index: ground" id=title src=/vizchange-animation/res/browning/discovery/time.png></image>
-                </div>
-        </div>
-            <div class="content transparent">
-                <div class="segment">
+
+                <div id="foter" class="segment">
                     <div class="fotnote">
-                        <div class="menu">
-                                <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
-                                <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
-                                <a class="button" href="/vizchange-animation#dive-intro">Discovery Dive</a>
-                                <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
-                                <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
-                        </div>
+                            <a class="button" href="/vizchange-animation/browning-menu">Intro</a>
+                            <a class="button" href="/vizchange-animation/browning-imersive">Immersion</a>
+                            <a class="button" href="/vizchange-animation#dive-intro">Discovery Dive</a>
+                            <a class="button" href="/vizchange-animation/browning-fishes">Fish Stories</a>
+                            <a class="button" href="/vizchange-animation/browning-evidence">Local Evidencia</a>
                     </div>
                 </div>
-            </div>
+                <div class="image-container">
+                                <image class="image-block background-back " style="z-index: background-back" id=D1 src="/vizchange-animation/res/browning/discovery/background_far.png"></image>
+                                <image class="image-block background-front " style="z-index: background-front" id=D2 src="/vizchange-animation/res/browning/imersion/d/2d-background.png"></image>
+                                <image class="image-block ground " style="z-index: ground" id=D3 src="/vizchange-animation/res/browning/imersion/d/3d-water.png"></image>
+                </div>
+                <div class="image-container">
+                                <image class="image-block ground-front " style="z-index: ground-front" id=bubbles src="/vizchange-animation/res/browning/discovery/popup1/bubbles.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=carbon src="/vizchange-animation/res/browning/discovery/popup1/carbon_cycle.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=extra src="/vizchange-animation/res/browning/discovery/popup1/extra.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes src="/vizchange-animation/res/browning/discovery/popup1/fishes_close.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=people src="/vizchange-animation/res/browning/discovery/popup1/people_closer.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes2 src="/vizchange-animation/res/browning/discovery/popup2/fishes.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=people2 src="/vizchange-animation/res/browning/discovery/popup2/foodweb.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=zoom src="/vizchange-animation/res/browning/discovery/popup2/zoom.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=people3 src="/vizchange-animation/res/browning/discovery/popup3/people_closer.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=fishes3 src="/vizchange-animation/res/browning/discovery/popup3/fishes_close.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri1 src="/vizchange-animation/res/browning/discovery/popup3/nutrients_1.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri2 src="/vizchange-animation/res/browning/discovery/popup3/nutrients_2.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=nutri2 src="/vizchange-animation/res/browning/discovery/popup3/nutrients_3.png"></image>
+                                <image class="image-block ground-front " style="z-index: ground-front" id=ice src="/vizchange-animation/res/browning/discovery/popup3/ice_close.png"></image>
+                </div>
+                <div class="image-container">
+                                <image class="image-block background " style="z-index: background" id=bg2 src="/vizchange-animation/res/browning/discovery/background_close.png"></image>
+                                <image class="image-block ground " style="z-index: ground" id=fg1 src="/vizchange-animation/res/browning/discovery/foreground_1.png"></image>
+                                <image class="image-block ground " style="z-index: ground" id=fg2 src="/vizchange-animation/res/browning/discovery/foreground_2.png"></image>
+                                <image class="image-block ground " style="z-index: ground" id=fg3 src="/vizchange-animation/res/browning/discovery/foreground_3.png"></image>
+                                <image class="image-block ground " style="z-index: ground" id=title src="/vizchange-animation/res/browning/discovery/time.png"></image>
+                </div>
+        </div>
     
     <div class="bottom margin">
     </div>

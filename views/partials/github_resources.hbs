@@ -5,14 +5,14 @@
         </div>
     {{else}}
         {{#if this.clickable}}
-            <image class="image-block {{this.level}} {{this.class}}" style="z-index: {{this.level}}" id={{this.id}} src=/vizchange-animation{{this.file}} usemap="#map_{{this.id}}"></image>
+            <image class="image-block {{this.level}} {{this.class}}" style="z-index: {{this.level}}" id={{this.id}} src="/vizchange-animation{{this.file}}" usemap="#map_{{this.id}}"></image>
             <map name="map_{{this.id}}">
                 {{#each this.clickable}}
-                    <area class="{{this.id}}" shape="rect" coords={{this.coords}} alt="Sun" href="#">
+                    <area class="menu_button" id="{{this.id}}" shape="rect" coords={{this.coords}} href="#">
                 {{/each}}
             </map>
         {{else}}
-            <image class="image-block {{this.level}} {{this.class}}" style="z-index: {{this.level}}" id={{this.id}} src=/vizchange-animation{{this.file}}></image>
+            <image class="image-block {{this.level}} {{this.class}}" style="z-index: {{this.level}}" id={{this.id}} src="/vizchange-animation{{this.file}}"></image>
         {{/if}}
     {{/if}}
 {{/each}}

@@ -4,24 +4,25 @@
 	<body>
     {{> script this}}
     {{#each acts}}
-
         {{#each this.audio}}
             <audio id="{{this.id}}" src="{{this.src}}" type="audio/mpeg" controls autoplay></audio>
         {{/each}}
-
         <div class="content" id={{this.id}}>
             {{#each this.scens}}
                 <div id={{this.id}} class="segment">
                     {{> segment parameters=this}}
                 </div>
             {{/each}}
-            <div id="foter" class="segment">
-                <div class="fotnote">
-                    {{#each next.redirect}}
-                        <a class="button" href="{{this.href}}">{{this.text}}</a>
-                    {{/each}}
+
+            {{#if next.redirect includeZero=true}}
+                <div id="foter" class="segment">
+                    <div class="fotnote">
+                        {{#each next.redirect}}
+                            <a class="button" href="{{this.href}}">{{this.text}}</a>
+                        {{/each}}
+                    </div>
                 </div>
-            </div>
+            {{/if}}
             {{#each this.resources}}
                 <div class="image-container">
                     {{> resources parameters=this }}
@@ -33,5 +34,4 @@
     {{> margin}}
 	</body>
     {{> footer this}}
-
 </html>
