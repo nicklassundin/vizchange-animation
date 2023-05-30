@@ -36,7 +36,6 @@ export class Menu extends Phrase {
             let scale = titleRect.width / 980
             let x = (elRect[0] - titleRect[2])
             let y = (elRect[1] - titleRect[3])
-            console.log(elRect, scale, elRect.map(x => x*scale))
             el.coords = elRect.map(x => x*scale).join(',')
         }
         let buttons = Object.values(document.getElementsByClassName('menu_button'))
