@@ -5,7 +5,7 @@
     {{> script this}}
     {{#each acts}}
         {{#each this.audio}}
-            <audio id="{{this.id}}" src="{{this.src}}" type="audio/mpeg" controls autoplay></audio>
+            <audio id="{{this.id}}" src="/vizchange-animation{{this.src}}" type="audio/mpeg" controls autoplay></audio>
         {{/each}}
         <div class="content" id={{this.id}}>
             {{#each this.scens}}
@@ -13,7 +13,6 @@
                     {{> github_segment parameters=this}}
                 </div>
             {{/each}}
-
             {{#if next.redirect includeZero=true}}
                 <div id="foter" class="segment">
                     <div class="fotnote">
