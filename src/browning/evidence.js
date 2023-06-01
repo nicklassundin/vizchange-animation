@@ -16,7 +16,7 @@ export class Evidence extends Phrase {
                 scrub: true,
                 //   snap: snap
             }
-        }, (timeline) => {
+        }, () => {
             let start = 0;
 
             ['#perc-1', '#perc-2', '#perc-3', '#perc-4', '#perc-5'].forEach((each, index) => {

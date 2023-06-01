@@ -34,6 +34,9 @@
 	--border-width: min(5px, .2vb);
 }
 
+audio {
+	display: none;
+}
 
 * {
 	-ms-overflow-style: none;

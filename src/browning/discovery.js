@@ -7,7 +7,6 @@ export class Discovery {
             lake: new Audio('audioLake'),
         }
         this.audio.lake.fadeAudio('discovery', 'discovery')
-        //let dive_yester = new Phrase('#lake', 'landscape', '#d1', '#bg2', '#fg1', '#fg2', '#fg3', '#title')
         let dive = new verticalAnimation('#dive-intro',
             'landscape',
             ['#title'],
@@ -26,7 +25,6 @@ export class Discovery {
                 3: '#dive-tomorrow',
             })
 
-        //let dive_yester = new verticalAnimation('#dive-yesterday', 'landscape', ['#title'], ['#bg2'], ['#fg1', '#fg2', '#fg3'], ['#d1', '#d2', '#d3'])
         dive.addLakeAlign(0);
         dive.addVertical('>');
         dive.addVertical('>');

@@ -13,10 +13,10 @@ let browning = require('./res/browning.js')
 app.get("/browning", (req, res) => {
 		res.render("browning.hbs", browning)
 	})
-app.get("/browning-imersive", (req, res) => {
+app.get("/browning-immersive", (req, res) => {
 	res.render("browning.hbs", {
-		acts: [browning.acts.imersion],
-		actsID: ['imersion']
+		acts: [browning.acts.immersion],
+		actsID: ['immersion']
 	})
 })
 app.get("/browning-discovery", (req, res) => {
@@ -66,8 +66,8 @@ app.use('/res/:path/:scen/*', function(req,res){
 // TODO github optimization
 
 app.render("browning-github.hbs", {
-	acts: [browning.acts.imersion],
-	actsID: ['imersion']
+	acts: [browning.acts.immersion],
+	actsID: ['immersion']
 }, (err, str) => {
 	if (err) {
 		throw err;

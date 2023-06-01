@@ -1,10 +1,10 @@
-let imersion = require('./browning/imersion.json');
+let immersion = require('./browning/immersion.json');
 let discovery = require('./browning/discovery.json');
 let fishes = require('./browning/fishes.json');
 let evidence = require('./browning/evidence.json');
 let menu = require('./browning/menu.json');
 exports.acts = {
-    imersion: imersion,
+    immersion: immersion,
     discovery: discovery,
     fishes: fishes,
     evidence: evidence,

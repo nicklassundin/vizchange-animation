@@ -1,5 +1,3 @@
-
-
 .margin {
     background: #ffffff;
     border-style: solid;
@@ -7,13 +5,10 @@
     position: fixed;
     z-index: 30000;
 }
-
-
 .corner {
     border-width: 0;
     z-index: 29900!important;
 }
-
 .bottom {
     border-width: var(--border-width) 0 0 0;
     width: calc(var(--max-width-adjusted) - 6 * var(--vw));
@@ -22,36 +17,6 @@
     left: calc(var(--left-margin) + 3 * var(--vw));
     z-index: 29900!important;
 }
-
-.credits {
-    aspect-ratio: 1 / 1;
-    height: auto;
-    position: fixed;
-    z-index: 400000!important;
-    right: 0;
-    bottom: 0;
-    padding-right: 1vw;
-    padding-bottom: 1vh;
-    text-align: right;
-    border-radius: 50%;
-    border-width: 0.1vw;
-    border-style: solid;
-    border-color: #333333;
-}
-.credits * {
-    opacity: 0;
-    transition-timing-function: ease;
-    transition: left 1s, width 1s, height 1s, background-color 1s, transform 1s;
-    transform: scale(.1);
-}
-.credits a {
-    text-decoration: none;
-    text-decoration-color: #333333;
-}
-.credits:hover {
-    transform: scale(1);
-}
-
 .right-side {
     border-width: 0 0 0 var(--border-width);
     background-blend-mode: darken, luminosity;
@@ -96,7 +61,6 @@
     height: var(--margin-top-height);
     width: calc(var(--left-margin-not-zero) + 3 * var(--vw));
     top: 0;
-
     border-width: 0 0 var(--border-width) 0;
 
 }
@@ -108,5 +72,45 @@
     max-width: calc(100 * var(--vw));
     top: 0;
     left: calc(var(--left-margin-not-zero) + 3 * var(--vw));
+}
+
+
+.credits {
+    position: fixed;
+    z-index: 400000!important;
+    right: 0;
+    bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-style: solid;
+    border-width: var(--border-width) 0 0 var(--border-width);
+    border-radius: 1em 0 0 0;
+    background-color: #ffffff;
+}
+.credits-title {
+    padding: calc(2 * var(--vh));
+    transition: transform 1s ;
+}
+.credits-content a {
+    text-decoration: none;
+    text-decoration-color: #495374;
+}
+.credits-content {
+    max-height: 0;
+    max-width: 10vw;
+    overflow: hidden;
+    text-align: right;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 2s, max-width 2s, opacity 2s;
+}
+.credits:hover .credits-content {
+    pointer-events: auto;
+    max-height: 500px;
+    max-width: 100vw;
+    opacity: 1;
+}
+.credits:hover .credits {
+    padding-bottom: 1em;
 }
 

@@ -16,7 +16,7 @@ export class Audio {
     get 'volume'() {
         return this.audio.volume;
     }
-    // function that fades in audio when element enterse viewport and fade out when it leaves
+    // function that fades in audio when element enters viewport and fade out when it leaves
     fadeAudio(start, end = start)  {
 
         let audio = this.audio;

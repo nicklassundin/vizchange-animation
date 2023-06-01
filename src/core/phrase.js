@@ -62,7 +62,7 @@ export class Phrase {
         return this.timeline;
     }
     fade(text, start = '<', pause = 0, id) {
-        text.map((each, i) => {
+        text.map((each) => {
             this.fadeIn(each, start, id)
             this.fadeOutPause(each, pause, id)
             start = '>';

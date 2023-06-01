@@ -17,9 +17,11 @@
             {{#if next.redirect includeZero=true}}
                 <div id="foter" class="segment">
                     <div class="fotnote">
-                        {{#each next.redirect}}
-                            <a class="button" href="{{this.href}}">{{this.text}}</a>
-                        {{/each}}
+                        <div class="menu">
+                            {{#each next.redirect}}
+                                <a class="button" href="{{this.href}}">{{this.text}}</a>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
             {{/if}}

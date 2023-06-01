@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/speechbubbles.css">
         <link rel="stylesheet" type="text/css" href="css/margins.css">
     
-                <link rel="stylesheet" type="text/css" href="css/browning_imersion.css"></link>
+                <link rel="stylesheet" type="text/css" href="css/browning_immersion.css"></link>
         <script src="client/bundle.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
@@ -90,8 +90,8 @@
                  */
                 acts.forEach(each => {
                     switch (each) {
-                        case 'imersion':
-                            new Imersive();
+                        case 'immersion':
+                            new Immersive();
                             break;
                         case 'discovery':
                             new Discovery();
@@ -111,13 +111,13 @@
     
                 ScrollTrigger.refresh()
             })
-        })("imersion")
+        })("immersion")
     </script>
             <audio id="audioLake" src="/vizchange-animation/res/browning/audio/lake.mp3" type="audio/mpeg" controls autoplay></audio>
             <audio id="audioMosquitos" src="/vizchange-animation/res/browning/audio/mosquitos.mp3" type="audio/mpeg" controls autoplay></audio>
             <audio id="audioStream" src="/vizchange-animation/res/browning/audio/stream.mp3" type="audio/mpeg" controls autoplay></audio>
             <audio id="audioWind" src="/vizchange-animation/res/browning/audio/wind.mp3" type="audio/mpeg" controls autoplay></audio>
-        <div class="content" id=imersion>
+        <div class="content" id=immersion>
                 <div id=titlescreen class="segment">
                     <!--TODO rename to type_github -->
                         <div class="header">
@@ -217,19 +217,34 @@
     <div class="top-left margin corner"></div>
     <div class="top-right margin corner"></div>
     
-    <!--
+    
+    
     <div class="credits">
-        <p>
-        <p>Artist and Artistic Director</p>
-        <a href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-bocquet-2801a1187/">Hélène Bocquet</a>
-        </p>
-        <br>
-        <p>
-        <p>Developer</p>
-        <a href="https://github.com/nicklassundin">Nicklas Sundin Johansson</a>
-        </p>
-    </div>
-    -->	</body>
+        <div class="credits-title">
+            <h3>Credits</h3>
+        </div>
+        <div class="credits-content">
+            <p>
+            <p>Artist and Artistic Director</p>
+            <a href="https://www.linkedin.com/in/h%C3%A9l%C3%A8ne-bocquet-2801a1187/">Hélène Bocquet</a>
+            </p>
+            <br>
+            <p>
+            <p>Developer</p>
+            <a href="https://github.com/nicklassundin">Nicklas Sundin Johansson</a>
+            </p>
+            <br>
+            <p>
+            <p>Sound Design</p>
+            <a href="https://www.timbishopartist.com">Tim Bishop</a><br>
+            <a href="http://www.iac.lu.se/tim-bishop/">Lund University Page</a>
+            </p>
+            <br>
+            <p>
+                Art project part of <a href="www.vizchange.net">Vizchange</a>
+            </p>
+        </div>
+    </div>	</body>
     <script>
         let trig = function(){
             document.querySelectorAll('.plot').forEach(div => {
