@@ -72,7 +72,7 @@ app.render("browning-github.hbs", {
 	if (err) {
 		throw err;
 	}
-	fs.writeFile("browning-imersive.html", str, (err) => {
+	fs.writeFile("browning-immersive.html", str, (err) => {
 			if (err) {
 				console.error(err);
 			}
